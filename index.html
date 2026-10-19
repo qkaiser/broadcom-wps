@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WPSplinter is a pre-authentication memory corruption vulnerability in Broadcom's legacy WPS implementation used by Wi-Fi routers and access points.">
+  <title>WPSplinter</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; --ink: #222; --muted: #666; --link: #174f8a; --rule: #ddd; --paper: #fff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 17px/1.6 Lato, Arial, sans-serif; }
+    main { width: min(900px, calc(100% - 40px)); margin: 0 auto; padding: 56px 0 72px; }
+    h1, h2, h3 { font-family: Lato, Arial, sans-serif; line-height: 1.2; }
+    h1 { margin: 0; font-size: clamp(2.4rem, 7vw, 4rem); letter-spacing: -.04em; }
+    .subtitle { margin: .35rem 0 1.6rem; color: var(--muted); font: 1.1rem/1.5 Lato, Arial, sans-serif; }
+    .summary { max-width: 780px; font-size: 1.18rem; }
+    h2 { margin: 2.8rem 0 .9rem; padding-bottom: .4rem; border-bottom: 1px solid var(--rule); font-size: 1.55rem; }
+    h3 { font-size: 1.1rem; }
+    a { color: var(--link); text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .note { padding: 12px 16px; border-left: 3px solid #999; background: #f6f6f6; font-size: .95rem; }
+    .device-table { width: 100%; border-collapse: collapse; font-size: .94rem; }
+    .device-table th, .device-table td { padding: 9px 10px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+    .device-table th { font: bold .8rem Lato, Arial, sans-serif; }
+    .device-table td:first-child { white-space: nowrap; }
+    dl { margin: 0; }
+    dt { margin: 1.15rem 0 .25rem; font-family: Lato, Arial, sans-serif; font-weight: bold; }
+    dd { margin: 0; }
+    ul { padding-left: 1.3rem; }
+    li { margin: .35rem 0; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+    @media (max-width: 600px) {
+      main { width: min(100% - 28px, 900px); padding-top: 34px; }
+      body { font-size: 16px; }
+      .table-wrap { overflow-x: auto; }
+      .device-table { min-width: 650px; }
+      .device-table th, .device-table td { padding: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>WPSplinter</h1>
+      <p class="subtitle">Broadcom WPS EAP fragment reassembly vulnerability</p>
+      <p class="summary">Broadcom’s legacy WPS Monitor implementation does not correctly constrain reassembled EAP-WPS fragments to the size of its destination buffer. A nearby attacker can reach the parser over Wi-Fi without knowing the network key or completing WPS enrollment. On vulnerable devices, this can cause controlled memory disclosure and arbitrary code execution.</p>
+      <p class="note">This page documents research presented by Quentin Kaiser at Hexacon 2026. Broadcom declined to assign a CVE identifier. The name “WPSplinter” is a researcher-assigned name, not a CVE.</p>
+    </header>
+
+    <section aria-labelledby="affected-heading">
+      <h2 id="affected-heading">Affected devices</h2>
+      <p><strong>The list below is not exhaustive.</strong> The vulnerability is in a shared Broadcom Wi-Fi software component, so other products using the affected WPS Monitor implementation may also be affected. Firmware and hardware revisions can differ within a model.</p>
+      <div class="table-wrap">
+        <table class="device-table">
+          <thead><tr><th scope="col">Vendor</th><th scope="col">Product</th><th scope="col">Versions / notes</th><th scope="col">Known deployment</th></tr></thead>
+          <tbody>
+            <tr><td>ARRIS</td><td>SURFboard AC1200</td><td>All listed versions</td><td>—</td></tr>
+            <tr><td>Arcadyan</td><td>VRV9517</td><td>At least through v6.00.18</td><td>KPN (“Experia Box V10A”), SPARK</td></tr>
+            <tr><td>Askey</td><td>TCG3000</td><td>Confirmed</td><td>Orange Belgium, VOO</td></tr>
+            <tr><td>Askey</td><td>RTF3505VW</td><td>At least through 203_n43</td><td>Movistar / Telefónica</td></tr>
+            <tr><td>CastleNET</td><td>NetMASTER Infinity 401MP, CBW-383ZN, CBW-383Z4, CBW-700V</td><td>Confirmed</td><td>Türksat Cablenet</td></tr>
+            <tr><td>Cisco</td><td>RV110W, RV130W, RV215W, RV340W, WAP121, WAP125, WAP150, WAP361, WAP371, WAP571, WAP571E, WAP581</td><td>Confirmed</td><td>—</td></tr>
+            <tr><td>Comtrend</td><td>VG8050</td><td>Confirmed; firmware builds observed through 2025</td><td>Movistar / O2 / Telefónica</td></tr>
+            <tr><td>Huawei</td><td>B310, B315, B593, WS880</td><td>Listed; verify firmware</td><td>—</td></tr>
+            <tr><td>NetComm</td><td>NF4V, NF10W, NF10WV, NF8AC, NF17ACV, NF18ACV, NF18MESH</td><td>Confirmed</td><td>Multiple Australian ISPs</td></tr>
+            <tr><td>Netgear</td><td>CG3100, CG3700B</td><td>Confirmed</td><td>Orange Belgium, VOO</td></tr>
+            <tr><td>Neuf</td><td>NB6, NB6VAC</td><td>Reported; firmware assessment ongoing</td><td>SFR</td></tr>
+            <tr><td>Nokia</td><td>G-140W-H, G-240W series, G-2426G-A</td><td>Confirmed; firmware varies</td><td>Multiple operators worldwide</td></tr>
+            <tr><td>Sagemcom</td><td>F@ST 3864 / 3864OP, F@ST 4353, F@ST 5336</td><td>Confirmed</td><td>Optus, Belong, Proximus</td></tr>
+            <tr><td>Technicolor</td><td>TC7210, CGA4233</td><td>Observed in deployed VOO fleet</td><td>VOO</td></tr>
+            <tr><td>Tenda</td><td>D301, N300</td><td>Reported; verify firmware</td><td>—</td></tr>
+            <tr><td>TP-Link</td><td>VR1600, TD-VG5612, Archer C3150, C5400, VR600, VR900, VR2800</td><td>Confirmed</td><td>Australian ISPs, Türk Telekom</td></tr>
+            <tr><td>ZTE</td><td>F680 v4, 368N</td><td>Confirmed</td><td>Multiple operators worldwide</td></tr>
+            <tr><td>Zyxel</td><td>VMG3312-B10A, VMG3312-B10B</td><td>Confirmed</td><td>Türk Telekom</td></tr>
+            <tr><td>MitraStar</td><td>GPT-2541GNAC</td><td>At least through 100VNJ0b38</td><td>Movistar / Telefónica</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>For a current, community-maintained list and device reporting instructions, see the <a href="https://github.com/qkaiser/broadcom-wps#affected-devices">repository’s affected-device list</a>.</p>
+    </section>
+
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <dl>
+        <dt>Does an attacker need the Wi-Fi password?</dt>
+        <dd>No. The vulnerable parser is reachable over Wi-Fi before normal WPS enrollment completes. The attacker must be within radio range.</dd>
+
+        <dt>What is the impact?</dt>
+        <dd>Research demonstrated controlled memory disclosure and arbitrary code execution on affected devices. The exact privileges and consequences depend on the product and firmware.</dd>
+
+        <dt>Does disabling WPS in the settings fix the problem?</dt>
+        <dd>Do not assume so. A settings toggle may not remove or fully disable the vulnerable parser. Ask the device vendor or ISP whether a firmware update addresses this specific issue.</dd>
+
+        <dt>Which Broadcom platforms are in scope?</dt>
+        <dd>The research covers Broadcom’s legacy WPS Monitor stack on eCos and Linux. Identified SoC families include BCM3380, BCM3383, BCM33834, BCM3390, BCM63xx, BCM65xx, and BCM68xx. A chipset match alone does not establish that a particular firmware is vulnerable.</dd>
+
+        <dt>Is there a patch?</dt>
+        <dd>Broadcom stated that it replaced WPS Monitor with hostapd starting in 2018. Device owners need a firmware update from their OEM or ISP; older eCos-based products may have no migration path.</dd>
+
+        <dt>Why is there no CVE number?</dt>
+        <dd>Broadcom declined to request a CVE, stating that the affected software was obsolete and outside its support window. “WPSplinter” is an informal researcher-assigned name.</dd>
+
+        <dt>Is every device in the list confirmed vulnerable?</dt>
+        <dd>Evidence and firmware coverage vary by model. The list records devices identified by the research; it is not a guarantee that every hardware or firmware revision is affected. The list is also incomplete.</dd>
+
+        <dt>How can an organization check its devices?</dt>
+        <dd>Use the YARA rules to triage extracted firmware or the repository’s fingerprinting script to identify the legacy Broadcom implementation over the air. These are detection aids; confirm results against the exact firmware.</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="references-heading">
+      <h2 id="references-heading">References</h2>
+      <ul>
+        <li><a href="https://quentinkaiser.be/security/2026/10/16/one-parser-two-bugs/">One Parser, Two Bugs, Many Routers</a> — technical research and disclosure timeline.</li>
+        <li><a href="https://quentinkaiser.be/assets/qkaiser-broadcom-wps-hexacon-2026.pdf">Hexacon 2026 slides</a> — “Exploiting Broadcom WiFi Across eCos and Linux.”</li>
+        <li><a href="https://github.com/qkaiser/broadcom-wps">Broadcom WPS detection toolkit</a> — YARA rules, fingerprinting script, and device list.</li>
+        <li><a href="https://github.com/qkaiser/broadcom-wps/blob/main/README.md">Detection and reporting instructions</a>.</li>
+      </ul>
+    </section>
+
+    <footer>Research by <a href="https://quentinkaiser.be">Quentin Kaiser</a> · Presented at Hexacon, 16 October 2026.</footer>
+  </main>
+</body>
+</html>
