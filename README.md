@@ -121,9 +121,6 @@ PCAP:       /tmp/broadcom-fingerprint-20261019T113912.161025Z/traffic.pcap
 Warning: selected AP does not advertise WPS
 ```
 
-
-
-
 The fingerprinting script relies on two things:
 1. the presence of Broadcom proprietary information elements
 2. an implementation quirk that can differentiate between Broadcom's wps_monitor and hostapd
@@ -139,8 +136,6 @@ wps_monitor sends a NACK (in a nutshell).
 
 If we have both signals (Broadcom IE + implementation quirk), we can assess
 with a rather high confidence level that you're affected.
-
-
 
 ## Reporting Affected Devices
 
@@ -158,12 +153,11 @@ The best way to verify that is to get your hands on the firmware, extract it,
 and run the YARA rule. If you don't have access to the firmware, you can run
 the fingerprinting script using a wireless interface in monitor mode.
 
-
-| Vendor | Product | Versions  | Confirmed | ISPs |
-|--------|---------|-----------|------------|------|
+| Vendor | Product | Versions | Confirmed | ISPs |
+|--------|---------|-----------|-----------|------|
 | ARRIS | ARRIS SURFboard AC1200 | ALL | Y | - |
 | Arcadyan | VRV9517 | at least up to v6.00.18 | Y | KPN (aka "Experia Box V10A"), SPARK |
-| Askey | Speedport W 723V Typ A | ALL | Y | Deutsche Telekom | 
+| Askey | Speedport W 723V Typ A | ALL | Y | Deutsche Telekom |
 | Askey | TCG3000 | ALL | Y | Orange Belgium, VOO |
 | Askey | RTF3505VW | ALL | Y | Movistar / O2 / Telefonica |
 | CastleNET | NetMASTER Infinity 401MP | ALL | Y | Türksat Cablenet |
@@ -182,7 +176,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Cisco | WAP571 | ALL | Y | - |
 | Cisco | WAP571E | ALL | Y | - |
 | Cisco | WAP581 | ALL | Y | - |
-| Comtrend | VG8050 | ALL | Y | Movistar / O2 / Telefonica | 
+| Comtrend | VG8050 | ALL | Y | Movistar / O2 / Telefonica |
 | Huawei | B310 | - | ALL | - |
 | Huawei | B315 | - | ALL | - |
 | Huawei | B593 | - | ALL | - |
@@ -193,12 +187,12 @@ the fingerprinting script using a wireless interface in monitor mode.
 | NetComm | NF10W | ALL | Y | Exetel, Aussie Broadband, Harbour ISP |
 | NetComm | NF10WV | ALL | Y | Exetel, Aussie Broadband |
 | NetComm | NF8AC | ALL | Y | Activ8me, Mate, SkyMesh, Aussie Broadband |
-| NetComm | NF17ACV | ALL | Y | SkyMesh, Aussie Broadband | 
+| NetComm | NF17ACV | ALL | Y | SkyMesh, Aussie Broadband |
 | NetComm | NF18ACV | ALL | Y | Aussie Broadband, Tangerine, Mate, Spintel |
 | NetComm | NF18MESH | ALL | Y | Aussie Broadband |
 | Netgear | CG3100 | ALL | Y | Orange Belgium, VOO |
 | Netgear | CG3700B | ALL | Y | Orange Belgium, VOO |
-| Neuf | NB6 | TODO | Y | SFR | 
+| Neuf | NB6 | TODO | Y | SFR |
 | Neuf | NB6VAC | TODO | Y | SFR |
 | Nokia | G-140W-H, G-240W-B, G-240W-A, G-240W-C, G-240W-F, G-240W-G, G-240W-J | ? | Y | Telmex, Speedy, ETB, Axtel, lucascell, STC, Du Telecom, Kazakhtelecom, Türk Telecom, Wind, Viettel, Etisalat, GO Telecom, True Internet, Singtel, Vodafone Turkey, Lattelekom, Sky Telecom, Vivacom, Proximus, Orange Ivory Coast, Canalbox Caraibes, Inea |
 | Sagemcom | F@ST 3864 / 3864OP | ALL | Y | Optus |
@@ -220,7 +214,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | Archer VR900 | ALL | Y | Türk Telekom |
 | TP-Link | TD-VG5612 | ALL | Y | MyNetFone, Barefoot, OntheNet |
 | TP-Link | VR1600 | ALL | Y | OntheNet, Future Broadband, Internode |
-| ZTE | F680 v4 | ALL | Y | MasMovil, ThailandToT, Telkom, Linkstar, Mnc, Viettel, VNPT, SeteTec, EgyptTEData, Ais, MTN, FranceReunicable, RTC, Indosat, MAXCom, EKT, OSP, Moldtelecom, Türk Telekom, TurkNet, AtlantisNet |
+| ZTE | F680 v4 | ALL | Y | MasMovil, ThailandToT, Telkom, Linkstar, Mnc, Viettel, VNPT, SeteTec, EgyptTEData, Ais, MTN, FranceReunicable, RTC, Indosat, MAXCom, EKT, Moldtelecom, Türk Telekom, TurkNet, AtlantisNet |
 | ZTE | 368N | ALL | Y | KPN (device is called "Experia Box v9"), Türk Telekom |
 | Zyxel | VMG3312-B10A, VMG3312-B10B | ALL | Y | Türk Telekom |
 | MitraStar | GPT-2541GNAC | ALL | Y | Movistar / O2 / Telefonica |
@@ -239,4 +233,12 @@ don't need to re-test the same models.
 | Sky | Q Hub ER110 | PATCHED_HOSTAPD | YARA |
 | Sky | Q Hub ER115 | PATCHED_HOSTAPD | YARA |
 
+## Inconclusive Results
 
+These devices were tested dynamically with the fingerprinting script, but the result did not establish whether they are vulnerable.
+
+| Vendor | Product | Version | Assessment | Method | ISP |
+|--------|---------|---------|------------|--------|-----|
+| Sagemcom | FAST 5670 | SGDV20000151 | INCONCLUSIVE | fingerprinting script; WPS not advertised | MásMóvil España |
+
+The access point did not advertise WPS in the captured frames. The test is inconclusive and does not establish whether this model or firmware is vulnerable. SSID and BSSID are omitted for privacy.
