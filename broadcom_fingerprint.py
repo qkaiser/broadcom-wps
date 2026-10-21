@@ -799,33 +799,49 @@ def _station_rsn_element(ap_rsn: bytes | None) -> bytes | None:
     akm_has_psk_sha256 = False
 
     if ap_rsn is not None:
+        # Layout: version(2) group(4) pcount(2) pairwise[...] acount(2) akm[...]
+        # Slicing never raises IndexError on short input, so every field is read
+        # through a strict reader. A truncated or lying length falls back only
+        # for the field that failed; earlier validated ciphers stay.
+
+        def take(offset: int, count: int) -> tuple[bytes, int]:
+            chunk = ap_rsn[offset : offset + count]
+            if len(chunk) != count:
+                raise ValueError("truncated RSN element")
+            return chunk, offset + count
+
         try:
-            # Layout: version(2) group(4) pcount(2) pairwise[...] acount(2) akm[...]
-            offset = 2
-            group_cipher = ap_rsn[offset : offset + 4] or group_cipher
-            offset += 4
-            pcount = int.from_bytes(ap_rsn[offset : offset + 2], "little")
-            offset += 2
-            advertised_pairwise = [
-                ap_rsn[offset + i * 4 : offset + i * 4 + 4] for i in range(pcount)
-            ]
-            offset += pcount * 4
-            acount = int.from_bytes(ap_rsn[offset : offset + 2], "little")
-            offset += 2
-            advertised_akm = [
-                ap_rsn[offset + i * 4 : offset + i * 4 + 4] for i in range(acount)
-            ]
-            # Prefer CCMP; fall back to whatever pairwise cipher the AP offered.
+            group_cipher, offset = take(2, 4)
+        except ValueError:
+            group_cipher = RSN_CIPHER_CCMP
+        else:
+            advertised_pairwise: list[bytes] = []
+            try:
+                pairwise_count_bytes, offset = take(offset, 2)
+                pairwise_count = int.from_bytes(pairwise_count_bytes, "little")
+                for _index in range(pairwise_count):
+                    suite, offset = take(offset, 4)
+                    advertised_pairwise.append(suite)
+            except ValueError:
+                pass
+            # Prefer CCMP; fall back to whatever pairwise suites we did read.
             if advertised_pairwise:
                 pairwise = (
                     [RSN_CIPHER_CCMP]
                     if RSN_CIPHER_CCMP in advertised_pairwise
                     else advertised_pairwise[:1]
                 )
+
+            advertised_akm: list[bytes] = []
+            try:
+                akm_count_bytes, offset = take(offset, 2)
+                akm_count = int.from_bytes(akm_count_bytes, "little")
+                for _index in range(akm_count):
+                    suite, offset = take(offset, 4)
+                    advertised_akm.append(suite)
+            except ValueError:
+                pass
             akm_has_psk_sha256 = RSN_AKM_PSK_SHA256 in advertised_akm
-        except (IndexError, ValueError):
-            group_cipher = RSN_CIPHER_CCMP
-            pairwise = [RSN_CIPHER_CCMP]
 
     # When the AP mandates PMF, PSK-SHA256 is the correct AKM; otherwise plain PSK.
     akm = RSN_AKM_PSK_SHA256 if akm_has_psk_sha256 else RSN_AKM_PSK
