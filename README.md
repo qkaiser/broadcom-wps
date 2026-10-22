@@ -272,6 +272,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Zyxel | VMG3312-B10A, VMG3312-B10B | ALL | Y | Türk Telekom |
 | Zyxel | VMG8924-B30A | ? | Y | O2 Czech Republic |
 | Zyxel | VMG1312-B30B | ? | Y | O2 Czech Republic |
+| Zyxel | VMG3925-B10C | V5.13(AAVF.18)C0 | Y | AAISP |
 
 ## Not Vulnerable (Patched)
 
