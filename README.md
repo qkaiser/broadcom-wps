@@ -308,6 +308,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sky | SkyHub SR101 | 3.4.5 | Y | Sky |
 | Sky | SkyHub SR102 | 2.8.8 | Y | Sky |
 | SmartRG | SR630n | 1.0.0.12.ICE | Y | Kölbi / ICE (Costa Rica) |
+| Tenda | D151 V2.0 (US) | V50.21.1.5 | Y | - |
 | Tenda | D301 / N300 | - | - | - |
 | Tenda | D301 V1.0 (US) | 1.2.11.2 | Y | - |
 | Tenda | V300 v1.0 | V53.0.1.6 | Y | - |
