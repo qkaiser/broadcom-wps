@@ -303,6 +303,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sagemcom | F@ST 5655 V2 | - | LIKELY | Magyar Telekom |
 | Sagemcom | F@ST 5656 | - | LIKELY | Orange Polska, NJU |
 | Sagemcom | F@ST 5657 | - | LIKELY | Yoigo |
+| Sagemcom | F@ST5317GV GVT | 6.51.31 | Y | - |
 | Sercomm | Easybox 804 | up to 05.02_5_4_8_1_325_1_21_1_8 at least | Y | Vodafone (DE) |
 | Sercomm | Group ONT L3 (253794565) | V1 | LIKELY | Vodafone / Lowi |
 | Sercomm | Speedport W 724V Typ C | ? | LIKELY | Deutsche Telekom |
