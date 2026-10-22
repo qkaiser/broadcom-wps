@@ -190,6 +190,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Vendor | Product | Versions  | Confirmed | ISPs |
 |--------|---------|-----------|------------|------|
 | Actiontec | C1000A | CAC004-31.30L.95 | Y | CenturyLink |
+| Actiontec | C2000A | CAH006-31.30L.95 | Y | CenturyLink |
 | Actiontec | C2300A | CAS001-31.165L.11 | Y | CenturyLink |
 | Actiontec | C3000A | CAD004-31.165L.13 | Y | CenturyLink |
 | Actiontec | Q1000 | QAQ004-31.20L.7 | Y | CenturyLink |
