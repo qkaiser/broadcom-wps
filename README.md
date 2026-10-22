@@ -269,6 +269,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sky | SkyHub SR102 | 2.8.8 | Y | Sky |
 | SmartRG | SR630n | 1.0.0.12.ICE | Y | Kölbi / ICE (Costa Rica) |
 | Tenda | D301 / N300 | - | - | - |
+| Tenda | V300 v1.0 | V53.0.1.6 | Y | - |
 | TP-Link | Archer C3150 | ALL | Y | Türk Telekom |
 | TP-Link | Archer C5400 | ALL | Y | Türk Telekom |
 | TP-Link | Archer D9 v1 | 0.9.1_0.1 Build 150826 | Y | - |
