@@ -332,6 +332,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sky | SR203 | at least 1.3.8.0.878-2020w47.2 | Y | Sky |
 | Sky | SkyHub SR101 | 3.4.5 | Y | Sky |
 | Sky | SkyHub SR102 | 2.8.8 | Y | Sky |
+| SmartRG | SR320n | 2.6.2.4 ICE | Y | - |
 | SmartRG | SR630n | 1.0.0.12.ICE | Y | Kölbi / ICE (Costa Rica) |
 | Technicolor | C2000T | CTH005-4.12.1.44 | Y | CenturyLink |
 | Technicolor | C2100T | CTQ003-4.12.1.78 | Y | CenturyLink |
