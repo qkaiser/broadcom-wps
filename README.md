@@ -192,6 +192,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Actiontec | C1000A | CAC004-31.30L.95 | Y | CenturyLink |
 | Actiontec | C2300A | CAS001-31.165L.11 | Y | CenturyLink |
 | Actiontec | C3000A | CAD004-31.165L.13 | Y | CenturyLink |
+| Actiontec | Q1000 | QAQ004-31.20L.7 | Y | CenturyLink |
 | Actiontec | T3200 | ? | Y | ? |
 | Adtran | C424G | CAO001-4.16.011.2 | Y | CenturyLink |
 | ARRIS | ARRIS SURFboard AC1200 | ALL | Y | - |
