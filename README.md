@@ -265,6 +265,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Huawei | B310 | ALL | - | - |
 | Huawei | B315 | ALL | - | - |
 | Huawei | B593 | ALL | - | - |
+| Huawei | HG659-13 (Vodacom South Africa) | V100R001C195B021 | Y | Vodacom |
 | Huawei | HG8245H | V300R013C10SPC122 | Y | - |
 | Huawei | Speedport Hybrid | 050124.04.00.013<br>ALL | Y | Deutsche Telekom |
 | Huawei | Speedport W 724V Typ A | ALL | Y | Deutsche Telekom |
