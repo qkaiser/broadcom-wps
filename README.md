@@ -255,6 +255,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sky | SR203 | at least 1.3.8.0.878-2020w47.2 | Y | Sky |
 | Sky | SkyHub SR101 | 3.4.5 | Y | Sky |
 | Sky | SkyHub SR102 | 2.8.8 | Y | Sky |
+| SmartRG | SR630n | 1.0.0.12.ICE | Y | Kölbi / ICE (Costa Rica) |
 | Tenda | D301 / N300 | - | - | - |
 | TP-Link | Archer C3150 | ALL | Y | Türk Telekom |
 | TP-Link | Archer C5400 | ALL | Y | Türk Telekom |
