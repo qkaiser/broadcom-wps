@@ -264,6 +264,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Netgear | DGN2200v4 (All regions except Germany) | 1.0.0.114<br>1.0.0.116<br>1.0.0.118<br>1.0.0.126<br>1.0.0.132<br>1.0.0.24<br>1.0.0.46<br>1.0.0.58<br>1.0.0.76 | Y | - |
 | Netgear | DGND3700v2 (North America) | 1.1.00.08<br>1.1.00.17<br>1.1.00.21<br>1.1.00.26 | Y | - |
 | Netgear | DGND3700v2 (Worldwide) | 1.1.00.26 | Y | - |
+| Netgear | DGND4000 | 1.1.00.15 | Y | - |
 | Neuf | NB6 | TODO | Y | SFR | 
 | Neuf | NB6VAC | TODO | Y | SFR |
 | Nokia | G-140W-H, G-240W-B, G-240W-A, G-240W-C, G-240W-F, G-240W-G, G-240W-J | ? | Y | Telmex, Speedy, ETB, Axtel, lucascell, STC, Du Telecom, Kazakhtelecom, Türk Telecom, Wind, Viettel, Etisalat, GO Telecom, True Internet, Singtel, Vodafone Turkey, Lattelekom, Sky Telecom, Vivacom, Proximus, Orange Ivory Coast, Canalbox Caraibes, Inea |
