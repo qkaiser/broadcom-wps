@@ -374,6 +374,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Zyxel | VMG8924-B30A | ? | Y | O2 Czech Republic |
 | Zyxel | VMG1312-B30B | ? | Y | O2 Czech Republic |
 | Zyxel | VMG3925-B10C | V5.13(AAVF.18)C0 | Y | AAISP |
+| Zyxel | XMG3927-Bx0A WiFi | V513ABQO1b5_D0 | Y | green.ch |
 
 ## Not Vulnerable (Patched)
 
