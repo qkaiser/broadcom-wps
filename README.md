@@ -270,6 +270,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Netgear | DGND4000 (North America) | 1.1.00.10 | Y | - |
 | Neuf | NB6 | TODO | Y | SFR | 
 | Neuf | NB6VAC | TODO | Y | SFR |
+| Nokia | BGW320-505 | 3.17.5 dnvpnP 021 | Y | AT&T |
 | Nokia | G-140W-H | 3FE48077HJIL96_V6 | Y | - |
 | Nokia | G-140W-H, G-240W-B, G-240W-A, G-240W-C, G-240W-F, G-240W-G, G-240W-J | ? | Y | Telmex, Speedy, ETB, Axtel, lucascell, STC, Du Telecom, Kazakhtelecom, Türk Telecom, Wind, Viettel, Etisalat, GO Telecom, True Internet, Singtel, Vodafone Turkey, Lattelekom, Sky Telecom, Vivacom, Proximus, Orange Ivory Coast, Canalbox Caraibes, Inea |
 | Nokia | G-240W-C | 3FE46322IJHL28_V3 | Y | - |
