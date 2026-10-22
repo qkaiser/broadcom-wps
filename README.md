@@ -370,6 +370,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | ZTE | Speedport Entry 2i (Annex A) | OTET11LW4O6P5A<br>OTET12LW4O6P5A | Y | Cosmote |
 | ZTE | Speedport Entry 2i (Cosmote) | OTET12LW4O6P5A | Y | - |
 | ZTE | ZXHN F660 | V5.2.10P2T29 | Y | VNPT |
+| ZTE | ZXHN H168N | V1.1.0_GR4T11 | Y | Hellas On Line (HOL) |
 | ZTE | ZXHN H168N (HOL variant) | V1.1.0_GR4T11 | Y | - |
 | Zyxel | 6641 | ? | Y | O2 Czech Republic |
 | Zyxel | AX7501-B1 | V5.17(ABPC.8)C0 | Y | Init7 |
