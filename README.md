@@ -255,6 +255,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Tenda | D301 / N300 | - | - | - |
 | TP-Link | Archer C3150 | ALL | Y | Türk Telekom |
 | TP-Link | Archer C5400 | ALL | Y | Türk Telekom |
+| TP-Link | Archer D9 v1 | 0.9.1_0.1 Build 150826 | Y | - |
 | TP-Link | Archer VR2800 | ALL | Y | Türk Telekom |
 | TP-Link | Archer VR600 | ALL | Y | Türk Telekom |
 | TP-Link | Archer VR900 | ALL | Y | Türk Telekom |
