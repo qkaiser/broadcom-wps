@@ -212,12 +212,13 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Cisco | WAP581 | ALL | Y | - |
 | Comtrend | VG8050 | ALL | Y | Movistar / O2 / Telefonica | 
 | FiberHome | HG6245D | ? | Y | PLDT, Globe (Philippines) |
-| Huawei | B310 | - | ALL | - |
-| Huawei | B315 | - | ALL | - |
-| Huawei | B593 | - | ALL | - |
+| Huawei | B310 | ALL | - | - |
+| Huawei | B315 | ALL | - | - |
+| Huawei | B593 | ALL | - | - |
 | Huawei | Speedport W 724V Typ A | ALL | Y | Deutsche Telekom |
 | Huawei | Speedport Hybrid | ALL | Y | Deutsche Telekom |
-| Huawei | WS880 | - | ALL | - |
+| Huawei | WS880 | ALL | - | - |
+| MitraStar | GPT-2541GNAC | ALL | Y | Movistar / O2 / Telefonica |
 | NetComm | NF4V | ALL | Y | Exetel, Harbour ISP, Spintel |
 | NetComm | NF10W | ALL | Y | Exetel, Aussie Broadband, Harbour ISP |
 | NetComm | NF10WV | ALL | Y | Exetel, Aussie Broadband |
@@ -230,12 +231,12 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Neuf | NB6 | TODO | Y | SFR | 
 | Neuf | NB6VAC | TODO | Y | SFR |
 | Nokia | G-140W-H, G-240W-B, G-240W-A, G-240W-C, G-240W-F, G-240W-G, G-240W-J | ? | Y | Telmex, Speedy, ETB, Axtel, lucascell, STC, Du Telecom, Kazakhtelecom, Türk Telecom, Wind, Viettel, Etisalat, GO Telecom, True Internet, Singtel, Vodafone Turkey, Lattelekom, Sky Telecom, Vivacom, Proximus, Orange Ivory Coast, Canalbox Caraibes, Inea |
+| Sagemcom | F@ST 2504 / 2504N | 6.14.2a4 | Y | Sky |
 | Sagemcom | F@ST 3864 / 3864OP | ALL | Y | Optus |
 | Sagemcom | F@ST 4353 | ALL | Y | Belong |
 | Sagemcom | F@st 5336 | ALL | Y | Proximus |
 | Sagemcom | F@ST 5655 V2 | - | LIKELY | Magyar Telekom |
 | Sagemcom | F@ST 5656 | - | LIKELY | Orange Polska, NJU |
-| Sagemcom | F@ST 2504 / 2504N | 6.14.2a4 | Y | Sky |
 | Sagemcom | F@ST 5657 | - | LIKELY | Yoigo |
 | Sercomm | Easybox 804 | up to 05.02_5_4_8_1_325_1_21_1_8 at least | Y | Vodafone (DE) |
 | Sercomm | Group ONT L3 (253794565) | V1 | LIKELY | Vodafone / Lowi |
@@ -254,7 +255,6 @@ the fingerprinting script using a wireless interface in monitor mode.
 | ZTE | F680 v4 | ALL | Y | MasMovil, ThailandToT, Telkom, Linkstar, Mnc, Viettel, VNPT, SeteTec, EgyptTEData, Ais, MTN, FranceReunicable, RTC, Indosat, MAXCom, EKT, OSP, Moldtelecom, Türk Telekom, TurkNet, AtlantisNet |
 | ZTE | 368N | ALL | Y | KPN (device is called "Experia Box v9"), Türk Telekom |
 | Zyxel | VMG3312-B10A, VMG3312-B10B | ALL | Y | Türk Telekom |
-| MitraStar | GPT-2541GNAC | ALL | Y | Movistar / O2 / Telefonica |
 
 ## Not Vulnerable (Patched)
 
