@@ -297,6 +297,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | Archer C5400 | ALL | Y | Türk Telekom |
 | TP-Link | Archer D9 v1 | 0.9.1_0.1 Build 150826 | Y | - |
 | TP-Link | Archer VR1600v V1 | Archer VR1600v(AU)_V1_2.1.0 Build 260318 | Y | - |
+| TP-Link | Archer VR1600v V2 | Archer VR1600v(ANZWISP)_V2_0.1.0 Build 260317 Rel.7757n | Y | - |
 | TP-Link | Archer VR2800 | ALL | Y | Türk Telekom |
 | TP-Link | Archer VR2800 V1 | (EU) 170809<br>(EU) 201103<br>Archer VR2800(EU)_V1_170110<br>Archer VR2800(EU)_V1_200227<br>Archer VR2800(EU)_V1_210313<br>Archer VR2800(EU)_V1_220120<br>Archer VR2800(EU)_V1_220512<br>Archer_VR2800(EU)_V1_170809<br>Archer_VR2800(EU)_V1_220512<br>Archer_VR2800(EU)V1_200624 beta<br>Archer_VR2800(EU)V1_200708 beta<br>Archer_VR2800(EU)V1_201103 beta<br>Archer_VR2800V1_0.8.0_0.9.1_up_boot(220120)<br>ArcherVR2800(EU)_V1_200710 | Y | - |
 | TP-Link | Archer VR400 V2 | (EU) 201104<br>200227<br>201104<br>220126<br>Archer VR400(EU)_V2_170224<br>Archer VR400(EU)_V2_170719<br>Archer VR400(EU)_V2_220126<br>ArcherVR400(EU)_V2_200227<br>ArcherVR400(EU)_V2_200706<br>ArcherVR400(EU)_V2_201104 | Y | - |
