@@ -248,6 +248,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sercomm | Easybox 804 | up to 05.02_5_4_8_1_325_1_21_1_8 at least | Y | Vodafone (DE) |
 | Sercomm | Group ONT L3 (253794565) | V1 | LIKELY | Vodafone / Lowi |
 | Sercomm | Speedport W 724V Typ C | ? | LIKELY | Deutsche Telekom |
+| Sercomm | RT-GM6 | ALL | LIKELY | Rostelecom |
 | Sky | SR203 | at least 1.3.8.0.878-2020w47.2 | Y | Sky |
 | Sky | SkyHub SR101 | 3.4.5 | Y | Sky |
 | Sky | SkyHub SR102 | 2.8.8 | Y | Sky |
