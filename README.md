@@ -189,7 +189,9 @@ the fingerprinting script using a wireless interface in monitor mode.
 
 | Vendor | Product | Versions  | Confirmed | ISPs |
 |--------|---------|-----------|------------|------|
+| Actiontec | T3200 | ? | Y | ? |
 | ARRIS | ARRIS SURFboard AC1200 | ALL | Y | - |
+| ARRIS | BGW210-700 | 1.5.12 | Y | AT&T |
 | Arcadyan | VRV9517 | at least up to v6.00.18 | Y | KPN (aka "Experia Box V10A"), SPARK |
 | Askey | Speedport W 723V Typ A | ALL | Y | Deutsche Telekom | 
 | Askey | TCG3000 | ALL | Y | Orange Belgium, VOO |
@@ -211,7 +213,8 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Cisco | WAP571E | ALL | Y | - |
 | Cisco | WAP581 | ALL | Y | - |
 | Comtrend | VG8050 | ALL | Y | Movistar / O2 / Telefonica | 
-| FiberHome | HG6245D | ? | Y | PLDT, Globe (Philippines) |
+| Comtrend | VR-3031eu | RA41-412VDC-C11_R04 | Y | Vodafone |
+| FiberHome | HG6245D | RP2725 | Y | PLDT, Globe (Philippines) |
 | Huawei | B310 | ALL | - | - |
 | Huawei | B315 | ALL | - | - |
 | Huawei | B593 | ALL | - | - |
@@ -219,6 +222,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Huawei | Speedport Hybrid | ALL | Y | Deutsche Telekom |
 | Huawei | WS880 | ALL | - | - |
 | MitraStar | GPT-2541GNAC | ALL | Y | Movistar / O2 / Telefonica |
+| Motorola | MD1600 | 1.0.0.6-72 | Y | ? |
 | NetComm | NF4V | ALL | Y | Exetel, Harbour ISP, Spintel |
 | NetComm | NF10W | ALL | Y | Exetel, Aussie Broadband, Harbour ISP |
 | NetComm | NF10WV | ALL | Y | Exetel, Aussie Broadband |
@@ -226,12 +230,15 @@ the fingerprinting script using a wireless interface in monitor mode.
 | NetComm | NF17ACV | ALL | Y | SkyMesh, Aussie Broadband | 
 | NetComm | NF18ACV | ALL | Y | Aussie Broadband, Tangerine, Mate, Spintel |
 | NetComm | NF18MESH | ALL | Y | Aussie Broadband |
+| NetComm | NL19MESH | NC.UR-R6B022.EN_ALG | Y | ? |
+| NetComm | NL1901ACV | NC.AU-R6B033.EN | Y | ? |
 | Netgear | CG3100 | ALL | Y | Orange Belgium, VOO |
 | Netgear | CG3700B | ALL | Y | Orange Belgium, VOO |
 | Neuf | NB6 | TODO | Y | SFR | 
 | Neuf | NB6VAC | TODO | Y | SFR |
 | Nokia | G-140W-H, G-240W-B, G-240W-A, G-240W-C, G-240W-F, G-240W-G, G-240W-J | ? | Y | Telmex, Speedy, ETB, Axtel, lucascell, STC, Du Telecom, Kazakhtelecom, Türk Telecom, Wind, Viettel, Etisalat, GO Telecom, True Internet, Singtel, Vodafone Turkey, Lattelekom, Sky Telecom, Vivacom, Proximus, Orange Ivory Coast, Canalbox Caraibes, Inea |
 | Sagemcom | F@ST 2504 / 2504N | 6.14.2a4 | Y | Sky |
+| Sagemcom | F@ST 3804 | 7.120a4N_RTC | Y | ? |
 | Sagemcom | F@ST 3864 / 3864OP | ALL | Y | Optus |
 | Sagemcom | F@ST 4353 | ALL | Y | Belong |
 | Sagemcom | F@st 5336 | ALL | Y | Proximus |
@@ -254,7 +261,10 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | VR1600 | ALL | Y | OntheNet, Future Broadband, Internode |
 | ZTE | F680 v4 | ALL | Y | MasMovil, ThailandToT, Telkom, Linkstar, Mnc, Viettel, VNPT, SeteTec, EgyptTEData, Ais, MTN, FranceReunicable, RTC, Indosat, MAXCom, EKT, OSP, Moldtelecom, Türk Telekom, TurkNet, AtlantisNet |
 | ZTE | 368N | ALL | Y | KPN (device is called "Experia Box v9"), Türk Telekom |
+| Zyxel | 6641 | ? | Y | O2 Czech Republic |
 | Zyxel | VMG3312-B10A, VMG3312-B10B | ALL | Y | Türk Telekom |
+| Zyxel | VMG8924-B30A | ? | Y | O2 Czech Republic |
+| Zyxel | VMG1312-B30B | ? | Y | O2 Czech Republic |
 
 ## Not Vulnerable (Patched)
 
