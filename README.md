@@ -301,6 +301,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | VR1600 | ALL | Y | OntheNet, Future Broadband, Internode |
 | ZTE | F680 v4 | ALL | Y | MasMovil, ThailandToT, Telkom, Linkstar, Mnc, Viettel, VNPT, SeteTec, EgyptTEData, Ais, MTN, FranceReunicable, RTC, Indosat, MAXCom, EKT, OSP, Moldtelecom, Türk Telekom, TurkNet, AtlantisNet |
 | ZTE | 368N | ALL | Y | KPN (device is called "Experia Box v9"), Türk Telekom |
+| ZTE | ZXHN H168N (HOL variant) | V1.1.0_GR4T11 | Y | - |
 | Zyxel | 6641 | ? | Y | O2 Czech Republic |
 | Zyxel | VMG3312-B10A, VMG3312-B10B | ALL | Y | Türk Telekom |
 | Zyxel | VMG8924-B30A | ? | Y | O2 Czech Republic |
