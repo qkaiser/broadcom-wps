@@ -364,6 +364,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Zyxel | C1100Z | CZW006-4.16.012.0 | Y | CenturyLink |
 | Zyxel | C2100Z | CZQ002-4.16.011.30 | Y | CenturyLink |
 | Zyxel | C3000Z | CZD003-4.16.009.47<br>CZD005-4.16.011.0 | Y | CenturyLink |
+| Zyxel | Q1000Z | QZZ002-4.4.015.4 | Y | CenturyLink |
 | Zyxel | VMG3312-B10A, VMG3312-B10B | ALL | Y | Türk Telekom |
 | Zyxel | VMG8924-B30A | ? | Y | O2 Czech Republic |
 | Zyxel | VMG1312-B30B | ? | Y | O2 Czech Republic |
