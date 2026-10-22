@@ -268,6 +268,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Netgear | D6300 (All regions except NA) | 1.0.0.24 | Y | - |
 | Netgear | D6300 (Worldwide except NA and Germany) | 1.0.0.102<br>1.0.0.90 | Y | - |
 | Netgear | D6400 | 1.0.0.102<br>1.0.0.106<br>1.0.0.108<br>1.0.0.114<br>1.0.0.34<br>1.0.0.52<br>1.0.0.88 | Y | - |
+| Netgear | D7000 | 1.0.0.18 | Y | - |
 | Netgear | D7000 v1 | 1.0.1.84 | Y | - |
 | Netgear | D8500 | 1.0.3.52 | Y | - |
 | Netgear | DGN2200Bv3 (Germany) | 1.1.00.23 | Y | - |
