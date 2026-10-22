@@ -293,6 +293,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Netgear | DGND3700v2 (Worldwide) | 1.1.00.26 | Y | - |
 | Netgear | DGND4000 | 1.1.00.15 | Y | - |
 | Netgear | DGND4000 (North America) | 1.1.00.10 | Y | - |
+| Netgear | WNR3500L | 1.2.2.48 | Y | K-Net |
 | Neuf | NB6 | TODO | Y | SFR | 
 | Neuf | NB6VAC | TODO | Y | SFR |
 | Nokia | BGW320-505 | 3.17.5 dnvpnP 021 | Y | AT&T |
