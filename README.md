@@ -314,6 +314,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Netgear | D7000 v1 | 1.0.1.84 | Y | - |
 | Netgear | D8500 | 1.0.3.52 | Y | - |
 | Netgear | DGN2200Bv3 (Germany) | 1.1.00.23 | Y | - |
+| Netgear | DGN2200Bv3 (Germany/Annex B) | 1.1.00.24 | Y | - |
 | Netgear | DGN2200Bv4 (Germany) | 1.0.0.109<br>1.0.0.60 | Y | - |
 | Netgear | DGN2200v3 (North America) | 1.1.00.21<br>1.1.00.23<br>1.1.00.24 | Y | - |
 | Netgear | DGN2200v3 (Worldwide except NA and Germany) | 1.1.00.23<br>1.1.00.24 | Y | - |
