@@ -282,6 +282,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Huawei | B310 | ALL | - | - |
 | Huawei | B315 | ALL | - | - |
 | Huawei | B593 | ALL | - | - |
+| Huawei | HG659 VER.B | V100R001C206B020<br>V100R001C206B026 | Y | One NZ (formerly Vodafone NZ) |
 | Huawei | HG659-13 (Vodacom South Africa) | V100R001C195B021 | Y | Vodacom |
 | Huawei | HG8245D | V300R017C10SPC126 | Y | - |
 | Huawei | HG8245H | V300R013C10SPC122 | Y | - |
