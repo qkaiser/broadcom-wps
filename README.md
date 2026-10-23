@@ -365,6 +365,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Tenda | V1200 V1.0 | V53.0.0.4 | Y | - |
 | Tenda | V1200 V1.0 (US) | V53.0.0.4 | Y | - |
 | Tenda | V300 v1.0 | V53.0.1.6 | Y | - |
+| Tenda | W150D V3 (Annex B) | US v1.0.0.2 | Y | - |
 | TP-Link | Archer C3150 | ALL | Y | Türk Telekom |
 | TP-Link | Archer C3150 V2 | Archer C3150(US)_V2_160812<br>Archer C3150(US)_V2_170225<br>Archer C3150(US)_V2_170628<br>Archer C3150(US)_V2_170926<br>Archer C3150_V2_170411 | Y | - |
 | TP-Link | Archer C5400 | ALL | Y | Türk Telekom |
