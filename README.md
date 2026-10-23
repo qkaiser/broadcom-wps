@@ -77,6 +77,10 @@ If beacons appear, your adapter is successfully receiving 802.11 frames.
 > ```
 > *(Always wrap the SSID in quotes if it contains spaces or special characters).*
 
+If the script reports that it could not authenticate or associate, add `--debug-assoc`
+to log the 802.11 authentication/association status codes to stderr. That tells you
+whether the AP never answered (filtered, off-channel) or answered with a status code.
+
 You should see something like this on affected devices:
 
 ```sh
@@ -148,6 +152,20 @@ JSON:       /tmp/broadcom-fingerprint-20261019T113912.161025Z/result.json
 PCAP:       /tmp/broadcom-fingerprint-20261019T113912.161025Z/traffic.pcap
 Warning: selected AP does not advertise WPS
 ```
+
+### Assessments
+
+The script can return four values in `Assessment`, not just the three shown above:
+
+| Assessment | Meaning |
+|---|---|
+| `LIKELY_VULNERABLE` | The bounded first fragment was rejected the way the legacy Broadcom WPS Monitor rejects it. |
+| `PATCHED_HOSTAPD` | The fragment was ACKed like hostapd does, and the beacon carried Broadcom evidence (proprietary IE or WPS identity defaults), so the device is Broadcom-based but runs hostapd. |
+| `NO_BROADCOM_FINGERPRINT` | The fragment was ACKed like hostapd does, but no Broadcom evidence was found. The device does not appear to use the Broadcom WPS stack at all. |
+| `INCONCLUSIVE` | No classifiable response. Check `warning` in `result.json`: the target may not advertise WPS, association may have failed, or the response did not match either pattern. |
+
+Only `LIKELY_VULNERABLE` is a positive finding. `INCONCLUSIVE` is not a clean result,
+and the three warnings above are different situations that need different fixes.
 
 
 
