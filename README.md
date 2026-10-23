@@ -365,6 +365,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | Archer C3150 | ALL | Y | Türk Telekom |
 | TP-Link | Archer C3150 V2 | Archer C3150(US)_V2_160812<br>Archer C3150(US)_V2_170225<br>Archer C3150(US)_V2_170628<br>Archer C3150(US)_V2_170926<br>Archer C3150_V2_170411 | Y | - |
 | TP-Link | Archer C5400 | ALL | Y | Türk Telekom |
+| TP-Link | Archer D9 V1 | 0.9.1 0.1 v0041.0 Build 160115 Rel.60441n<br>Archer D9_V1_140905<br>Archer D9_V1_141027<br>Archer D9_V1_150313<br>Archer D9_V1_150514 | Y | - |
 | TP-Link | Archer D9 v1 | 0.9.1_0.1 Build 150826 | Y | - |
 | TP-Link | Archer VR1600v V1 | Archer VR1600v(AU)_V1_2.1.0 Build 260318 | Y | - |
 | TP-Link | Archer VR1600v V2 | Archer VR1600v(ANZWISP)_V2_0.1.0 Build 260317 Rel.7757n | Y | - |
