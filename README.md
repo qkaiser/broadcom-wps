@@ -194,6 +194,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | ARRIS | BGW210-700 | 1.0.24<br>1.0.29<br>1.10.9<br>1.5.11<br>1.5.12<br>1.6.7<br>1.8.18<br>1.9.14<br>1.9.16<br>2.10.4<br>2.10.6<br>2.11.5<br>2.12.4<br>2.15.4<br>2.16.4<br>2.17.4<br>2.17.5<br>2.3.4<br>2.4.4<br>2.5.6<br>2.6.4<br>2.7.1<br>2.7.7<br>2.8.5<br>2.8.7<br>2.9.4 | Y | AT&T |
 | Arcadyan | VRV9517 | at least up to v6.00.18 | Y | KPN (aka "Experia Box V10A"), SPARK |
 | ARRIS | NVG589 | 11.5.0h0d51<br>11.6.0h0d48<br>9.2.2h0d79 CFEROM | Y | AT&T |
+| ARRIS | NVG599 | 11.5.0h0d51<br>11.6.0h0d48<br>9.2.2h0d79 CFEROM<br>9.2.2h0d83 | Y | AT&T |
 | Askey | Speedport W 723V Typ A | ALL | Y | Deutsche Telekom | 
 | Askey | TCG3000 | ALL | Y | Orange Belgium, VOO |
 | Askey | RTF3505VW | ALL | Y | Movistar / O2 / Telefonica |
