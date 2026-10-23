@@ -263,6 +263,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-2750U H/W Rev C | 1.0.11 | Y | - |
 | D-Link | DSL-2750U H/W Rev C + B1A/T2A shared 1.0.4 package | 1.0.4 | Y | - |
 | D-Link | DSL-2751 Rev D1 | revd1_EU100_ALL_multi_20130424<br>revd1_EU101-11102014_ALL_multi_20141110<br>revd1_EU101_ALL_multi_20131008 | Y | - |
+| D-Link | DSL-2790U (Middle East; HW not stated) | DSL-2790U-ME_v1.00 | Y | - |
 | D-Link | DSL-2790U Rev A | AU 1.00.14 20151211 R1767 | Y | - |
 | D-Link | DSL-2870B REVA | DSL-2870B_FW_upgrade_from_v1.01.24_to_v2.00.00AU_06062013<br>DSL-2870B_FW_v1.01.14_07272012<br>DSL-2870B_FW_v1.01.23_11062012<br>DSL-2870B_FW_v1.01.24_11152012 | Y | - |
 | D-Link | DSL-2880AL Rev A (Australia) | AU 1.00 08202013 | Y | - |
