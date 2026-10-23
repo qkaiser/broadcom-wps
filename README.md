@@ -377,6 +377,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | Archer VR600 V2 | (AU) 200624<br>170504<br>200226<br>Archer VR600(EU)_V2_170504<br>Archer VR600(EU)_V2_200226<br>Archer_VR600(AU)_V2_170302<br>Archer_VR600(AU)_V2_190123<br>Archer_VR600(AU)_V2_200226<br>Archer_VR600(EU)V2_200701 beta<br>Archer_VR600(EU)V2_201104 beta<br>Archer_VR600_AU2.0 beta (2018-02-06)<br>Archer_VR600V2_210409 beta | Y | - |
 | TP-Link | Archer VR600v V2 | (EU) 170814<br>(EU) 200624<br>Archer VR600v(EU)_V2_220112 | Y | - |
 | TP-Link | Archer VR900 | ALL | Y | Türk Telekom |
+| TP-Link | Archer VR900 V3 | 170303<br>200228<br>210322<br>Archer VR900(EU)_V3_170303<br>Archer VR900(EU)_V3_200228<br>Archer VR900(EU)V3_191218 beta<br>ArcherVR900(EU)_V3_210322 | Y | - |
 | TP-Link | TD-VG5612 | ALL | Y | MyNetFone, Barefoot, OntheNet |
 | TP-Link | TD-W9970 V3 | (EU) 200227<br>190419<br>200227<br>221012<br>TD-W9970(EU)_V3.0_190419<br>TD-W9970(EU)_V3_200227<br>TD-W9970_V3_221012_RC | Y | - |
 | TP-Link | TD-W9970 V3.0 | (EU) 190419<br>TD-W9970(EU)_V3.0_190419 | Y | - |
