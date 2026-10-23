@@ -204,6 +204,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | ARRIS | NVG599 | 11.5.0h0d51<br>11.6.0h0d48<br>9.2.2h0d79 CFEROM<br>9.2.2h0d83 | Y | AT&T |
 | Askey | RTV1900VW | 08.06.06 | Y | Swisscom (Internet-Box light) |
 | Askey | Speedport W 723V Typ A | 1.01.022<br>ALL | Y | Deutsche Telekom |
+| Askey | Speedport W 723V Typ A (RTV1645VW-E83 OEM) | 1.00.092 | Y | Deutsche Telekom |
 | Askey | TCG3000 | ALL | Y | Orange Belgium, VOO |
 | Askey | RTF3505VW | ALL | Y | Movistar / O2 / Telefonica |
 | ASUS | DSL-AC3100 | 1.10.04_Build460<br>1.10.05_Build502<br>1.10.05_Build503<br>1.10.06_Build585<br>1.10.06_Build591<br>1.10.08_Build593 | Y | - |
