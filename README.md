@@ -240,6 +240,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-2640U | NRU_C4_1.0.10_20110407 | Y | - |
 | D-Link | DSL-2640U Annex B | 1.0.1<br>1.0.2 | Y | - |
 | D-Link | DSL-2640U H/W Rev C4 | 1.0.14<br>1.0.19<br>1.0.20<br>1.0.24<br>1.0.30<br>1.0.32 | Y | - |
+| D-Link | DSL-2640U/B1A/T3A | 1.0.3<br>1.0.7 | Y | - |
 | D-Link | DSL-2641B Rev E1 | reve1_100b04_04142011_ALL_multi_20110414<br>reve1_201_03092012_ALL_multi_20120309<br>reve1_206_ALL_multi_20121204 | Y | - |
 | D-Link | DSL-2650U H/W Rev C1 | 1.0.13<br>1.0.16<br>1.0.17 | Y | - |
 | D-Link | DSL-2650U H/W Rev T1 | 1.0.3 | Y | - |
