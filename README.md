@@ -235,6 +235,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Cisco | WAP581 | ALL | Y | - |
 | Comtrend | VG8050 | ALL | Y | Movistar / O2 / Telefonica | 
 | Comtrend | VR-3031eu | RA41-412VDC-C11_R04 | Y | Vodafone |
+| D-Link | DSL-2600U H/W Rev C4 | 1.0.1<br>1.0.3<br>1.0.4<br>1.0.5 | Y | - |
 | D-Link | DSL-2640B Rev E1 | reve1_206_ALL_multi_20130122 | Y | - |
 | D-Link | DSL-2640U | NRU_C4_1.0.10_20110407 | Y | - |
 | D-Link | DSL-2640U H/W Rev C4 | 1.0.14<br>1.0.19<br>1.0.20<br>1.0.24<br>1.0.30<br>1.0.32 | Y | - |
