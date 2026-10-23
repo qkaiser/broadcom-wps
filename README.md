@@ -409,6 +409,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | ZTE | ZXHN F660 | V5.2.10P2T29 | Y | VNPT |
 | ZTE | ZXHN H168N | V1.1.0_GR4T11 | Y | Hellas On Line (HOL) |
 | ZTE | ZXHN H168N (HOL variant) | V1.1.0_GR4T11 | Y | - |
+| ZTE | ZXHN H168N V1.1.0 | V1.1.0_GR4T10<br>V1.1.0_GR4T11 | Y | HOL |
 | ZTE | ZXHN H268A V1.0 | V1.0.1_ETL.1T7 | Y | Exetel |
 | ZTE | ZXHN H268N HV100 | FV100_OTET11LW4O6P5A<br>FV100_OTET12LW4O6P5A | Y | Cosmote |
 | Zyxel | 6641 | ? | Y | O2 Czech Republic |
