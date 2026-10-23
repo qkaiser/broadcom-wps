@@ -392,6 +392,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | Archer VR900 | ALL | Y | Türk Telekom |
 | TP-Link | Archer VR900 V1 | 160218<br>160316<br>170119<br>Archer VR900(EU)_V1_160218<br>Archer VR900(EU)_V1_160316<br>Archer VR900(EU)_V1_170119<br>Archer VR900_V1_150429<br>Archer VR900_V1_150729<br>Archer_VR900_V1_150909<br>Archer_VR900_V1_151111<br>Archer_VR900_V1_151210 | Y | - |
 | TP-Link | Archer VR900 V3 | 170303<br>200228<br>210322<br>Archer VR900(EU)_V3_170303<br>Archer VR900(EU)_V3_200228<br>Archer VR900(EU)V3_191218 beta<br>ArcherVR900(EU)_V3_210322 | Y | - |
+| TP-Link | Deco X20-DSL V1 | Deco X20-DSL(EU)_V1_1.0.11 Build 20230609<br>Deco X20-DSL(EU)_V1_1.0.12 Build 20230714<br>Deco X20-DSL(EU)_V1_1.0.13 Build 20231226<br>Deco X20-DSL(EU)_V1_1.0.2_20210317<br>Deco X20-DSL(EU)_V1_1.0.3_20210422<br>Deco X20-DSL(EU)_V1_1.0.4_Build_20210807<br>Deco X20-DSL(EU)_V1_1.0.5 Build 20221214<br>Deco X20-DSL(EU)_V1_1.0.6 Build 20230303<br>Deco X20-DSL(US)_V1_1.0.12 Build 20230714 | Y | - |
 | TP-Link | TD-VG5612 | ALL | Y | MyNetFone, Barefoot, OntheNet |
 | TP-Link | TD-W8950N V1 | 1.0.2_150916R36150<br>TD-W8950N_V1_140106<br>TD-W8950N_V1_150205<br>TD-W8950N_V1_160203 | Y | Orange Polska |
 | TP-Link | TD-W8950N V1 (Orange Polska) | 1.0.2 Build 150916 Rel.36150 | Y | Orange Polska |
