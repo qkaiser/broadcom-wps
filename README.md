@@ -236,6 +236,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-2741B Rev F1 | revf1_100b09_04142011_ALL_multi_20110414<br>revf1_201_03092012_ALL_multi_20120309<br>revf1_206_ALL_multi_20121228 | Y | - |
 | D-Link | DSL-2750B Rev D | revd_eu104-1601_ALL_multi_20150722<br>revd_eu105-1521_EU_multi_20180730 | Y | - |
 | D-Link | DSL-2750B Rev D1 | revd1_EU102_ALL_multi_20130610<br>revd1_EU102_ALL_multi_20131111<br>revd1_eu104-08032015_ALL_multi_20150803 | Y | - |
+| D-Link | DSL-2750B REVB | DSL2750B_B1_AU_1.00_06232011<br>DSL2750B_B1_AU_2.00_12282011<br>DSL2750B_B1_AU_2.01_03012012<br>DSL2750B_B1_AU_2.03_06282012<br>DSL2750B_B1_AU_2.05_08032012<br>DSL2750B_B1_AU_2.07_10082012 | Y | - |
 | D-Link | DSL-2750B REVD1 | revd1_eu102-09232014_ALL_multi_20140923 | Y | - |
 | D-Link | DSL-2750B REVT | DSl-2750B.T1_Firmware_AU_3.00_20121018<br>DSl-2750B.T1_Firmware_AU_3.01_20130313<br>DSl-2750B.T1_Firmware_AU_3.02_20131211<br>DSl-2750B.T1_Firmware_AU_3.05_20140718<br>DSL-2750B.T1_Firmware_AU_3.06_20141028<br>DSL-2750B.T1_Firmware_AU_3.08_25032015 | Y | - |
 | D-Link | DSL-2751 Rev D1 | revd1_EU100_ALL_multi_20130424<br>revd1_EU101-11102014_ALL_multi_20141110<br>revd1_EU101_ALL_multi_20131008 | Y | - |
