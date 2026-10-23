@@ -240,8 +240,8 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Huawei | B315 | ALL | - | - |
 | Huawei | B593 | ALL | - | - |
 | Huawei | HG8245H | V300R013C10SPC122 | Y | - |
+| Huawei | Speedport Hybrid | 050124.04.00.013<br>ALL | Y | Deutsche Telekom |
 | Huawei | Speedport W 724V Typ A | ALL | Y | Deutsche Telekom |
-| Huawei | Speedport Hybrid | ALL | Y | Deutsche Telekom |
 | Huawei | WS880 | ALL | - | - |
 | MitraStar | GPT-2541GNAC | ALL | Y | Movistar / O2 / Telefonica |
 | Motorola | MD1600 | 1.0.0.6-72 | Y | ? |
