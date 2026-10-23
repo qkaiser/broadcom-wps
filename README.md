@@ -290,6 +290,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sagemcom | F@ST 3864 / 3864OP | ALL | Y | Optus |
 | Sagemcom | F@ST 4353 | ALL | Y | Belong |
 | Sagemcom | F@st 5336 | ALL | Y | Proximus |
+| Sagemcom | F@st 5364 (TalkTalk) | SG4K10001E00t / 6.72.38<br>SG4K10002600t / 6.72.40<br>SG4K10002808t / 6.72.44<br>SG4K10002810t / 6.72.44.11<br>SG4K10002816t / 6.72.44.14 | Y | TalkTalk |
 | Sagemcom | F@ST 5655 V2 | - | LIKELY | Magyar Telekom |
 | Sagemcom | F@ST 5656 | - | LIKELY | Orange Polska, NJU |
 | Sagemcom | F@ST 5657 | - | LIKELY | Yoigo |
