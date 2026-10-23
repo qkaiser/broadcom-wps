@@ -320,6 +320,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sercomm | Group ONT L3 (253794565) | V1 | LIKELY | Vodafone / Lowi |
 | Sercomm | Speedport W 724V Typ C | ? | LIKELY | Deutsche Telekom |
 | Sercomm | RT-GM6 | ALL | LIKELY | Rostelecom |
+| SFR | NB6VAC | 4.0.44d<br>4.0.44f<br>4.0.44i<br>4.0.44j<br>4.0.44k<br>4.0.45<br>4.0.45c<br>4.0.45d<br>4.0.46 | Y | RED by SFR |
 | Sky | SR203 | at least 1.3.8.0.878-2020w47.2 | Y | Sky |
 | Sky | SkyHub SR101 | 3.4.5 | Y | Sky |
 | Sky | SkyHub SR102 | 2.8.8 | Y | Sky |
