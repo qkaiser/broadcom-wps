@@ -332,6 +332,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sagemcom | F@ST 2504 / 2504N | 6.14.2a4 | Y | Sky |
 | Sagemcom | F@st 2704 (Etisalat) | 6.29.3a4N | Y | - |
 | Sagemcom | F@st 2704 V2 (TPSA/Orange Polska) | 5.38.6a4N | Y | Orange Polska |
+| Sagemcom | F@st 2804 v7 HW 2704 (Rostelecom) | 6.54zhy4a4N_RTC | Y | Rostelecom |
 | Sagemcom | F@ST 3804 | 7.120a4N_RTC | Y | ? |
 | Sagemcom | F@ST 3864 / 3864OP | ALL | Y | Optus |
 | Sagemcom | F@ST 4353 | ALL | Y | Belong |
