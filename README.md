@@ -248,6 +248,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-2650U H/W Rev T1 | 1.0.3 | Y | - |
 | D-Link | DSL-2730B REVT | DSL-2730B-T1-FW-AU_1.00<br>DSL-2730B-T1-FW-AU_2.00<br>DSL-2730B_T1_FW_AU_2.01 | Y | - |
 | D-Link | DSL-2730U Rev C1 (ME) | 1.00_B03 | Y | - |
+| D-Link | DSL-2740B | 1.00<br>2.06 | Y | - |
 | D-Link | DSL-2740B Rev F1 | revf1_206_ALL_multi_20121126 | Y | - |
 | D-Link | DSL-2740B Rev F1 (AU) | 1.00<br>2.00<br>2.01<br>2.03<br>2.04<br>2.07 | Y | - |
 | D-Link | DSL-2740BR REVF | DSL2740B_F1_AU_1.00_IPv6<br>DSL2740B_F1_AU_2.00_10132011<br>DSL2740B_F1_AU_2.01_03082012<br>DSL2740B_F1_AU_2.03_06282012<br>DSL2740B_F1_AU_2.04_07262012<br>DSL2740B_F1_AU_2.07_10082012 | Y | - |
