@@ -399,6 +399,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | TD-W8968 V3 | TD-W8968(IT)_V3_160108<br>TD-W8968_V3_140321<br>TD-W8968_V3_140326_IT<br>TD-W8968_V3_140821<br>TD-W8968_V3_150205<br>TD-W8968_V3_150512 | Y | - |
 | TP-Link | TD-W8968 V4 | TD-W8968(EU)_V4_151130<br>TD-W8968(EU)_V4_151229<br>TD-W8968_V4_150504 | Y | - |
 | TP-Link | TD-W8968 V5 | TD-W8968(EU)_V5_160905<br>TD-W8968(EU)_V5_170331 | Y | - |
+| TP-Link | TD-W8968 V5 (UN) | TD-W8968v5_un_2_0_0_190307 | Y | - |
 | TP-Link | TD-W8970 V3 | TD-W8970_V3_141212<br>TD-W8970_V3_150427 | Y | - |
 | TP-Link | TD-W8970 V3 (EU) | TD-W8970(EU)_V3_160816 | Y | - |
 | TP-Link | TD-W8970 V3 (UN) | TD-W8970_V3_141010 | Y | - |
