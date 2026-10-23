@@ -373,6 +373,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Tenda | D151 V2.0 (US) | V50.21.1.5 | Y | - |
 | Tenda | D301 / N300 | - | - | - |
 | Tenda | D301 V1.0 (US) | 1.2.11.2 | Y | - |
+| Tenda | V1200 | 53.0.0.4 | Y | - |
 | Tenda | V1200 V1.0 | V53.0.0.4 | Y | - |
 | Tenda | V1200 V1.0 (US) | V53.0.0.4 | Y | - |
 | Tenda | V300 | 53.0.1.6 | Y | - |
