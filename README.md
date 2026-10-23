@@ -225,6 +225,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-2640B Rev E1 | reve1_206_ALL_multi_20130122 | Y | - |
 | D-Link | DSL-2641B Rev E1 | reve1_100b04_04142011_ALL_multi_20110414<br>reve1_201_03092012_ALL_multi_20120309<br>reve1_206_ALL_multi_20121204 | Y | - |
 | D-Link | DSL-2740B Rev F1 | revf1_206_ALL_multi_20121126 | Y | - |
+| D-Link | DSL-2750B Rev D | revd_eu104-1601_ALL_multi_20150722<br>revd_eu105-1521_EU_multi_20180730 | Y | - |
 | D-Link | DSL-4320L A1 | AU 1.00.14 20151214<br>AU 1.00.15 20160107<br>AU 1.00.16 20160121<br>AU 1.00.19 20160306<br>AU 1.00.20 20160421<br>AU 1.00.21 20160524<br>AU 1.01.00 20160928<br>AU 1.01.02 20161109<br>AU 1.01.05 20170116<br>AU 1.01.11 | Y | - |
 | FiberHome | HG6245D | RP2725 | Y | PLDT, Globe (Philippines) |
 | Huawei | B310 | ALL | - | - |
