@@ -215,6 +215,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Cisco | WAP581 | ALL | Y | - |
 | Comtrend | VG8050 | ALL | Y | Movistar / O2 / Telefonica | 
 | Comtrend | VR-3031eu | RA41-412VDC-C11_R04 | Y | Vodafone |
+| D-Link | DSL-4320L A1 | AU 1.00.14 20151214<br>AU 1.00.15 20160107<br>AU 1.00.16 20160121<br>AU 1.00.19 20160306<br>AU 1.00.20 20160421<br>AU 1.00.21 20160524<br>AU 1.01.00 20160928<br>AU 1.01.02 20161109<br>AU 1.01.05 20170116<br>AU 1.01.11 | Y | - |
 | FiberHome | HG6245D | RP2725 | Y | PLDT, Globe (Philippines) |
 | Huawei | B310 | ALL | - | - |
 | Huawei | B315 | ALL | - | - |
