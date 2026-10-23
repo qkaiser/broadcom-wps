@@ -330,6 +330,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | Archer VR900 | ALL | Y | Türk Telekom |
 | TP-Link | TD-VG5612 | ALL | Y | MyNetFone, Barefoot, OntheNet |
 | TP-Link | TD-W9970 V3 | (EU) 200227<br>190419<br>200227<br>221012<br>TD-W9970(EU)_V3.0_190419<br>TD-W9970(EU)_V3_200227<br>TD-W9970_V3_221012_RC | Y | - |
+| TP-Link | TD-W9970 V3.0 | (EU) 190419<br>TD-W9970(EU)_V3.0_190419 | Y | - |
 | TP-Link | VR1600 | ALL | Y | OntheNet, Future Broadband, Internode |
 | ZTE | F680 v4 | ALL | Y | MasMovil, ThailandToT, Telkom, Linkstar, Mnc, Viettel, VNPT, SeteTec, EgyptTEData, Ais, MTN, FranceReunicable, RTC, Indosat, MAXCom, EKT, OSP, Moldtelecom, Türk Telekom, TurkNet, AtlantisNet |
 | ZTE | 368N | ALL | Y | KPN (device is called "Experia Box v9"), Türk Telekom |
