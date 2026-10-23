@@ -268,6 +268,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-2880AL Rev A (Australia) | AU 1.00 08202013 | Y | - |
 | D-Link | DSL-2880AL REVA | DSL-2880AL_A1_AU_1.01_01072014<br>DSL-2880AL_A1_AU_1.01b_03132014<br>DSL-2880AL_A1_AU_2.00_06052014<br>DSL-2880AL_A1_AU_2.01_09112014 | Y | - |
 | D-Link | DSL-2890AL Rev A (AU) | AU 1.01.02 20130524<br>AU 1.01.03 20130613<br>AU 1.01.04 20130906<br>AU 1.02.02 20131203<br>AU 1.02.04 20140121<br>AU 1.02.06 20140528<br>AU 1.02.07 20150427<br>AU 1.02.08 20150507<br>AU 1.02.10 20160617 | Y | - |
+| D-Link | DSL-2890AL Rev A1 (Middle East listing) | 1.02.08 | Y | - |
 | D-Link | DSL-2900AL Rev A (AU) | AU 1.00.25 20160329<br>AU 1.00.26 20160426<br>AU 1.01.00 20160905 | Y | - |
 | D-Link | DSL-3580L Rev A2 | reva2_eu202-08042015_ALL_multi_20150804 | Y | - |
 | D-Link | DSL-3580L REVA2 | reva2_eu201-12192014-1013_ALL_multi_20141219 | Y | - |
