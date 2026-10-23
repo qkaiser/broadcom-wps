@@ -196,6 +196,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Askey | Speedport W 723V Typ A | ALL | Y | Deutsche Telekom | 
 | Askey | TCG3000 | ALL | Y | Orange Belgium, VOO |
 | Askey | RTF3505VW | ALL | Y | Movistar / O2 / Telefonica |
+| ASUS | DSL-AC68U | 3.0.0.4.382_50302<br>3.0.0.4.384_21128<br>3.0.0.4.384_56087<br>3.0.0.4.384_80766<br>3.0.0.4.384_81140<br>3.0.0.4.384_81727<br>3.0.0.4.384_81981<br>3.0.0.4.386_38287<br>3.0.0.4.386_38832<br>3.0.0.4.386_39648<br>3.0.0.4.386_41995<br>3.0.0.4.386_43252<br>3.0.0.4.386_45662<br>3.0.0.4.386_47534<br>3.0.0.4.386_50117<br>3.0.0.4.386_50120<br>3.0.0.4.386_52006 | Y | - |
 | ASUS | DSL-AC68VG | 5.00.04_build248<br>5.00.07_build271<br>5.00.08_build272<br>5.00.09_build274 | Y | - |
 | ASUS | DSL-AC87VG Annex B | 1.00.13_build502<br>1.00.14_build508<br>1.05.16_build287<br>1.05.17_build299<br>1.05.18_build305<br>1.05.19_build307 | Y | - |
 | ASUS | DSL-AC88U Annex A | 1.10.06_Build591<br>1.10.08_Build593 | Y | - |
