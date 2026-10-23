@@ -203,6 +203,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Arcadyan | VRV9517 | at least up to v6.00.18 | Y | KPN (aka "Experia Box V10A"), SPARK |
 | ARRIS | NVG589 | 11.5.0h0d51<br>11.6.0h0d48<br>9.2.2h0d79 CFEROM | Y | AT&T |
 | ARRIS | NVG599 | 11.5.0h0d51<br>11.6.0h0d48<br>9.2.2h0d79 CFEROM<br>9.2.2h0d83 | Y | AT&T |
+| Askey | RTF3505VW REV4_B6M (Movistar Spain, GPON HGU) | ES_s00.00_g003_R3505VWSTD203_n43 | Y | Movistar Spain / Telefónica |
 | Askey | RTV1900VW | 08.06.06 | Y | Swisscom (Internet-Box light) |
 | Askey | Speedport W 723V Typ A | 1.01.022<br>ALL | Y | Deutsche Telekom |
 | Askey | Speedport W 723V Typ A (RTV1645VW-E83 OEM) | 1.00.092 | Y | Deutsche Telekom |
