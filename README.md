@@ -264,6 +264,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-4320L REVA | DSL4320L_AU_1.01.11 | Y | - |
 | D-Link | DSL-5300 Rev A | AU 1.00<br>AU 1.05<br>AU 1.07 | Y | - |
 | D-Link | DSL-6740U | 1.0.10 | Y | - |
+| D-Link | DSL-G225 H/W Rev U1 | 2.5.9 | Y | - |
 | D-Link | DSL-G225 Rev J (AU) | AU 1.0.2<br>AU 1.0.3<br>AU 1.0.4<br>AU 1.0.5<br>AU 1.0.6 | Y | - |
 | D-Link | DSL-G225 REVJ | VDM206-2-DL-DSL-G225-EE-NoF-U1-R435-20170313.w | Y | - |
 | FiberHome | HG6245D | RP2725 | Y | PLDT, Globe (Philippines) |
