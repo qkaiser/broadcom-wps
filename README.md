@@ -243,6 +243,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | NetComm | NL1901ACV | NC.AU-R6B033.EN | Y | ? |
 | Netgear | CG3100 | ALL | Y | Orange Belgium, VOO |
 | Netgear | CG3700B | ALL | Y | Orange Belgium, VOO |
+| Netgear | D6220 | 1.0.0.16<br>1.0.0.28<br>1.0.0.32<br>1.0.0.60<br>1.0.0.72<br>1.0.0.74<br>1.0.0.76<br>1.0.0.80 | Y | - |
 | Netgear | D6400 | 1.0.0.102<br>1.0.0.106<br>1.0.0.108<br>1.0.0.114<br>1.0.0.34<br>1.0.0.52<br>1.0.0.88 | Y | - |
 | Netgear | D7000 v1 | 1.0.1.84 | Y | - |
 | Neuf | NB6 | TODO | Y | SFR | 
