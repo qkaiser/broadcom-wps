@@ -294,6 +294,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | Archer C5400 | ALL | Y | Türk Telekom |
 | TP-Link | Archer D9 v1 | 0.9.1_0.1 Build 150826 | Y | - |
 | TP-Link | Archer VR2800 | ALL | Y | Türk Telekom |
+| TP-Link | Archer VR2800 V1 | (EU) 170809<br>(EU) 201103<br>Archer VR2800(EU)_V1_170110<br>Archer VR2800(EU)_V1_200227<br>Archer VR2800(EU)_V1_210313<br>Archer VR2800(EU)_V1_220120<br>Archer VR2800(EU)_V1_220512<br>Archer_VR2800(EU)_V1_170809<br>Archer_VR2800(EU)_V1_220512<br>Archer_VR2800(EU)V1_200624 beta<br>Archer_VR2800(EU)V1_200708 beta<br>Archer_VR2800(EU)V1_201103 beta<br>Archer_VR2800V1_0.8.0_0.9.1_up_boot(220120)<br>ArcherVR2800(EU)_V1_200710 | Y | - |
 | TP-Link | Archer VR600 | ALL | Y | Türk Telekom |
 | TP-Link | Archer VR900 | ALL | Y | Türk Telekom |
 | TP-Link | TD-VG5612 | ALL | Y | MyNetFone, Barefoot, OntheNet |
