@@ -327,6 +327,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Sagemcom | F@ST5317GV Vivo | 6.51.28 | Y | - |
 | Sagemcom | F@ST5350GV GVT | 3.12.5904 | Y | - |
 | Sercomm | Easybox 804 | up to 05.02_5_4_8_1_325_1_21_1_8 at least | Y | Vodafone (DE) |
+| SerComm | EasyBox 804 (CIS804) | 01.05_5.4.8.1.242.1.24<br>02.06_5.4.8.1.270.1.29<br>03.02_5.4.8.1.299.1.28 | Y | Vodafone Germany |
 | Sercomm | Group ONT L3 (253794565) | V1 | LIKELY | Vodafone / Lowi |
 | Sercomm | Speedport W 724V Typ C | ? | LIKELY | Deutsche Telekom |
 | Sercomm | RT-GM6 | ALL | LIKELY | Rostelecom |
