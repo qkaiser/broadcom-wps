@@ -393,6 +393,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | TP-Link | TD-W8968 V4 | TD-W8968(EU)_V4_151130<br>TD-W8968(EU)_V4_151229<br>TD-W8968_V4_150504 | Y | - |
 | TP-Link | TD-W8968 V5 | TD-W8968(EU)_V5_160905<br>TD-W8968(EU)_V5_170331 | Y | - |
 | TP-Link | TD-W8970 V3 | TD-W8970_V3_141212<br>TD-W8970_V3_150427 | Y | - |
+| TP-Link | TD-W8970 V3 (UN) | TD-W8970_V3_141010 | Y | - |
 | TP-Link | TD-W9970 V3 | (EU) 200227<br>190419<br>200227<br>221012<br>TD-W9970(EU)_V3.0_190419<br>TD-W9970(EU)_V3_200227<br>TD-W9970_V3_221012_RC | Y | - |
 | TP-Link | TD-W9970 V3.0 | (EU) 190419<br>TD-W9970(EU)_V3.0_190419 | Y | - |
 | TP-Link | VR1600 | ALL | Y | OntheNet, Future Broadband, Internode |
