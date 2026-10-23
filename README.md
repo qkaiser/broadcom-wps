@@ -230,6 +230,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | D-Link | DSL-2740B Rev F1 | revf1_206_ALL_multi_20121126 | Y | - |
 | D-Link | DSL-2741B Rev F1 | revf1_100b09_04142011_ALL_multi_20110414<br>revf1_201_03092012_ALL_multi_20120309<br>revf1_206_ALL_multi_20121228 | Y | - |
 | D-Link | DSL-2750B Rev D | revd_eu104-1601_ALL_multi_20150722<br>revd_eu105-1521_EU_multi_20180730 | Y | - |
+| D-Link | DSL-2750B Rev D1 | revd1_EU102_ALL_multi_20130610<br>revd1_EU102_ALL_multi_20131111<br>revd1_eu104-08032015_ALL_multi_20150803 | Y | - |
 | D-Link | DSL-2751 Rev D1 | revd1_EU100_ALL_multi_20130424<br>revd1_EU101-11102014_ALL_multi_20141110<br>revd1_EU101_ALL_multi_20131008 | Y | - |
 | D-Link | DSL-3580L Rev A2 | reva2_eu202-08042015_ALL_multi_20150804 | Y | - |
 | D-Link | DSL-3590L Rev A | reva_eu10012_ALL_multi_20160704 | Y | - |
