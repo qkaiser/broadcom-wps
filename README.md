@@ -197,6 +197,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Askey | TCG3000 | ALL | Y | Orange Belgium, VOO |
 | Askey | RTF3505VW | ALL | Y | Movistar / O2 / Telefonica |
 | ASUS | DSL-AC88U Annex A | 1.10.06_Build591<br>1.10.08_Build593 | Y | - |
+| ASUS | DSL-AC88U Annex B | 1.10.06_Build591<br>1.10.08_Build593 | Y | - |
 | CastleNET | NetMASTER Infinity 401MP | ALL | Y | Türksat Cablenet |
 | CastleNET | NetMASTER CBW-383ZN | ALL | Y | Türksat Cablenet |
 | CastleNET | NetMASTER CBW-383Z4 | ALL | Y | Türksat Cablenet |
