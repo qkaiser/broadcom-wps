@@ -199,6 +199,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | ASUS | DSL-AC87VG Annex B | 1.00.13_build502<br>1.00.14_build508<br>1.05.16_build287<br>1.05.17_build299<br>1.05.18_build305<br>1.05.19_build307 | Y | - |
 | ASUS | DSL-AC88U Annex A | 1.10.06_Build591<br>1.10.08_Build593 | Y | - |
 | ASUS | DSL-AC88U Annex B | 1.10.06_Build591<br>1.10.08_Build593 | Y | - |
+| ASUS | DSL-AX82U | 3.0.0.4.386.49608<br>3.0.0.4.386_42438<br>3.0.0.4.386_43563<br>3.0.0.4.386_43600<br>3.0.0.4.386_48378<br>3.0.0.4.388_22048<br>3.0.0.4.388_23756<br>3.0.0.4.388_24894<br>3.0.0.4.388_24906<br>3.0.0.4.388_24919<br>3.0.0.4.388_25052<br>3.0.0.4.388_25110 | Y | - |
 | CastleNET | NetMASTER Infinity 401MP | ALL | Y | Türksat Cablenet |
 | CastleNET | NetMASTER CBW-383ZN | ALL | Y | Türksat Cablenet |
 | CastleNET | NetMASTER CBW-383Z4 | ALL | Y | Türksat Cablenet |
