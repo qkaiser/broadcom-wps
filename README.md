@@ -357,6 +357,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | ZTE | Speedport Entry 2i (Cosmote) | OTET12LW4O6P5A | Y | - |
 | ZTE | ZXHN H168N (HOL variant) | V1.1.0_GR4T11 | Y | - |
 | Zyxel | 6641 | ? | Y | O2 Czech Republic |
+| Zyxel | C3000Z | CZD003-4.16.009.47<br>CZD005-4.16.011.0 | Y | CenturyLink |
 | Zyxel | VMG3312-B10A, VMG3312-B10B | ALL | Y | Türk Telekom |
 | Zyxel | VMG8924-B30A | ? | Y | O2 Czech Republic |
 | Zyxel | VMG1312-B30B | ? | Y | O2 Czech Republic |
