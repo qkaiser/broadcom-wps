@@ -203,6 +203,7 @@ the fingerprinting script using a wireless interface in monitor mode.
 | Arcadyan | VRV9517 | at least up to v6.00.18 | Y | KPN (aka "Experia Box V10A"), SPARK |
 | ARRIS | NVG589 | 11.5.0h0d51<br>11.6.0h0d48<br>9.2.2h0d79 CFEROM | Y | AT&T |
 | ARRIS | NVG599 | 11.5.0h0d51<br>11.6.0h0d48<br>9.2.2h0d79 CFEROM<br>9.2.2h0d83 | Y | AT&T |
+| ARRIS/CommScope | X5001 (PX5001 firmware target, XF3) | 3.12p10s1<br>3.12p3s2<br>3.12p8s1<br>3.12p9s1<br>3.14p4s1<br>3.14p5s1<br>3.14p6s1<br>3.14p7s2<br>3.14p8s1<br>3.5p8s1<br>3.6p1s3<br>3.6p2s1<br>3.6p3s1<br>3.6p3s2<br>3.6p4s1<br>3.6p5s1<br>4.0p1s1<br>4.0p1s3<br>4.0p3s1<br>4.0p4s2<br>4.0p4s3<br>4.0p5s1<br>4.0p6s1<br>4.10p7s1<br>4.10p8s2<br>4.12p10s3<br>4.12p13s1<br>4.12p14s6<br>4.12p22s1<br>4.12p24s1<br>4.12p3s3<br>4.12p4s2<br>4.12p7s1<br>4.12p8s1<br>4.2p1s2<br>4.2p1s3<br>4.2p3s5<br>4.2p6s1<br>4.2p6s3<br>4.2p7s1<br>4.2p8s1<br>4.2p9s1<br>4.4p2s1<br>4.4p4s2<br>4.4p7s1<br>4.4p8s1<br>4.6p4s1<br>4.6p5s4<br>4.6p7s1<br>4.8p10s1<br>4.8p11s2<br>4.8p12s1<br>4.8p7s1<br>4.8p9s2 | Y | Comcast (Xfinity) |
 | Askey | RTF3505VW REV4_B6M (Movistar Spain, GPON HGU) | ES_s00.00_g003_R3505VWSTD203_n43 | Y | Movistar Spain / Telefónica |
 | Askey | RTV1900VW | 08.06.06 | Y | Swisscom (Internet-Box light) |
 | Askey | Speedport W 723V Typ A | 1.01.022<br>ALL | Y | Deutsche Telekom |
