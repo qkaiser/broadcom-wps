@@ -38,6 +38,7 @@ from scapy.layers.dot11 import (
     Dot11ProbeReq,
     RadioTap,
 )
+from scapy.arch.common import compile_filter
 from scapy.layers.l2 import LLC, SNAP
 from scapy.packet import Packet, Raw
 from scapy.sendrecv import AsyncSniffer, sendp
@@ -995,10 +996,35 @@ class ScapyFingerprintBackend:
     def _start_capture(self) -> None:
         if self._sniffer is not None:
             raise FingerprintError("capture is already running")
+        # ``_receive`` already drops every frame without the target BSSID, but only
+        # after scapy has dissected it, and dissection is the bottleneck on weak
+        # hardware. Apply the same test in the kernel instead. The three address
+        # fields are named explicitly rather than using ``wlan host``, whose
+        # expansion is frame-type dependent: on a from-DS data frame it tests addr3
+        # and addr1 and never addr2, which is the field ``_parse_ap_eap`` keys on,
+        # and it rejects control frames outright. Only beacons are excluded, because
+        # nothing past this point reads them.
+        bssid = self.target.bssid
+        capture_filter = (
+            f"(wlan addr1 {bssid} or wlan addr2 {bssid} or wlan addr3 {bssid})"
+            " and not (type mgt and subtype beacon)"
+        )
+        kwargs: dict[str, str] = {}
+        try:
+            # Validate here, in this thread. AsyncSniffer builds its socket inside
+            # the sniffing thread and stores the failure in ``exception``, so
+            # ``start()`` returns cleanly and a rejected filter would otherwise leave
+            # a live object with a dead thread and no capture at all.
+            compile_filter(capture_filter, iface=self.interface)
+        except Exception:
+            pass
+        else:
+            kwargs["filter"] = capture_filter
         sniffer = AsyncSniffer(
             iface=self.interface,
             store=False,
             prn=self._receive,
+            **kwargs,
         )
         self._sniffer = sniffer
         try:
