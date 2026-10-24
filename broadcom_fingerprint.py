@@ -554,9 +554,20 @@ def random_station() -> str:
     return octets.hex(":")
 
 
+def _radiotap() -> Packet:
+    """Transmit at the lowest basic rate rather than leaving the rate to the driver.
+
+    A bare ``RadioTap()`` sets ``present=0``, so mac80211 chooses the rate and the
+    frame can go out at a modulation the target does not answer. The sweep is
+    2.4 GHz only, so 1 Mbps DSSS is always a valid basic rate.
+    """
+
+    return RadioTap(present="Rate", Rate=1)
+
+
 def _wildcard_probe(station: str) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=4,
@@ -573,7 +584,7 @@ def _wildcard_probe(station: str) -> Packet:
 
 def _directed_probe(station: str, target: Observation) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=4,
@@ -712,7 +723,7 @@ class LiveDiscovery:
 
 def _authentication_frame(station: str, target: Observation) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=11,
@@ -736,7 +747,7 @@ def _association_frame(
     # the "minimal" attempt drops RSN entirely for open/legacy APs.
     rates = target.rates
     frame = (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=0,
@@ -844,7 +855,7 @@ def _station_data_frame(
     eapol: bytes,
 ) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=2,
             subtype=0,
@@ -861,7 +872,7 @@ def _station_data_frame(
 
 def _deauthentication_frame(station: str, target: Observation) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=12,
@@ -1062,7 +1073,7 @@ class ScapyFingerprintBackend:
                     flags &= ~0x04
                 fragment_header.FCfield = flags
                 fragment_header.SC = (sequence << 4) | (offset // MAC_FRAGMENT_SIZE)
-                fragments.append(RadioTap() / fragment_header / Raw(chunk))
+                fragments.append(_radiotap() / fragment_header / Raw(chunk))
             with self._pcap_lock:
                 for fragment in fragments:
                     self.pcap.write(fragment)
