@@ -38,6 +38,7 @@ from scapy.layers.dot11 import (
     Dot11ProbeReq,
     RadioTap,
 )
+from scapy.arch.common import compile_filter
 from scapy.layers.l2 import LLC, SNAP
 from scapy.packet import Packet, Raw
 from scapy.sendrecv import AsyncSniffer, sendp
@@ -554,9 +555,20 @@ def random_station() -> str:
     return octets.hex(":")
 
 
+def _radiotap() -> Packet:
+    """Transmit at the lowest basic rate rather than leaving the rate to the driver.
+
+    A bare ``RadioTap()`` sets ``present=0``, so mac80211 chooses the rate and the
+    frame can go out at a modulation the target does not answer. The sweep is
+    2.4 GHz only, so 1 Mbps DSSS is always a valid basic rate.
+    """
+
+    return RadioTap(present="Rate", Rate=1)
+
+
 def _wildcard_probe(station: str) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=4,
@@ -573,7 +585,7 @@ def _wildcard_probe(station: str) -> Packet:
 
 def _directed_probe(station: str, target: Observation) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=4,
@@ -712,7 +724,7 @@ class LiveDiscovery:
 
 def _authentication_frame(station: str, target: Observation) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=11,
@@ -736,7 +748,7 @@ def _association_frame(
     # the "minimal" attempt drops RSN entirely for open/legacy APs.
     rates = target.rates
     frame = (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=0,
@@ -844,7 +856,7 @@ def _station_data_frame(
     eapol: bytes,
 ) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=2,
             subtype=0,
@@ -861,7 +873,7 @@ def _station_data_frame(
 
 def _deauthentication_frame(station: str, target: Observation) -> Packet:
     return (
-        RadioTap()
+        _radiotap()
         / Dot11(
             type=0,
             subtype=12,
@@ -984,10 +996,35 @@ class ScapyFingerprintBackend:
     def _start_capture(self) -> None:
         if self._sniffer is not None:
             raise FingerprintError("capture is already running")
+        # ``_receive`` already drops every frame without the target BSSID, but only
+        # after scapy has dissected it, and dissection is the bottleneck on weak
+        # hardware. Apply the same test in the kernel instead. The three address
+        # fields are named explicitly rather than using ``wlan host``, whose
+        # expansion is frame-type dependent: on a from-DS data frame it tests addr3
+        # and addr1 and never addr2, which is the field ``_parse_ap_eap`` keys on,
+        # and it rejects control frames outright. Only beacons are excluded, because
+        # nothing past this point reads them.
+        bssid = self.target.bssid
+        capture_filter = (
+            f"(wlan addr1 {bssid} or wlan addr2 {bssid} or wlan addr3 {bssid})"
+            " and not (type mgt and subtype beacon)"
+        )
+        kwargs: dict[str, str] = {}
+        try:
+            # Validate here, in this thread. AsyncSniffer builds its socket inside
+            # the sniffing thread and stores the failure in ``exception``, so
+            # ``start()`` returns cleanly and a rejected filter would otherwise leave
+            # a live object with a dead thread and no capture at all.
+            compile_filter(capture_filter, iface=self.interface)
+        except Exception:
+            pass
+        else:
+            kwargs["filter"] = capture_filter
         sniffer = AsyncSniffer(
             iface=self.interface,
             store=False,
             prn=self._receive,
+            **kwargs,
         )
         self._sniffer = sniffer
         try:
@@ -1062,7 +1099,7 @@ class ScapyFingerprintBackend:
                     flags &= ~0x04
                 fragment_header.FCfield = flags
                 fragment_header.SC = (sequence << 4) | (offset // MAC_FRAGMENT_SIZE)
-                fragments.append(RadioTap() / fragment_header / Raw(chunk))
+                fragments.append(_radiotap() / fragment_header / Raw(chunk))
             with self._pcap_lock:
                 for fragment in fragments:
                     self.pcap.write(fragment)
