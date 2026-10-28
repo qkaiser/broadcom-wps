@@ -999,6 +999,7 @@ class ScapyFingerprintBackend:
         self._sequences: dict[str, int] = {}
         self._recovered_session: tuple[str, int] | None = None
         self._sniffer: AsyncSniffer | None = None
+        self._capture_station: str | None = None
 
     def __enter__(self) -> Self:
         set_channel(self.interface, self.target.channel)
@@ -1023,19 +1024,31 @@ class ScapyFingerprintBackend:
     def _start_capture(self) -> None:
         if self._sniffer is not None:
             raise FingerprintError("capture is already running")
-        # ``_receive`` already drops every frame without the target BSSID, but only
-        # after scapy has dissected it, and dissection is the bottleneck on weak
-        # hardware. Apply the same test in the kernel instead. The three address
-        # fields are named explicitly rather than using ``wlan host``, whose
-        # expansion is frame-type dependent: on a from-DS data frame it tests addr3
-        # and addr1 and never addr2, which is the field ``_parse_ap_eap`` keys on,
-        # and it rejects control frames outright. Only beacons are excluded, because
-        # nothing past this point reads them.
+        # ``_receive`` already drops every frame outside this exchange, but only after
+        # scapy has dissected it, and dissecting 802.11 is the cost on a weak host: on
+        # a WiFi Pineapple Mk7 (MIPS 24KEc, 385 BogoMIPS) a callback that reaches the
+        # Dot11 layer keeps up with 4 to 6 frames per second, whatever the filter.
+        # Matching the BSSID alone does not get under that, because every frame of
+        # every other client of the BSS carries it in one of the three address fields:
+        # 6.3 frames per second measured on an idle home AP, which saturates the budget
+        # and leaves the capture seconds behind the air. Pairing it with the station
+        # address identifies the exchange exactly, and the same channel then delivers
+        # 0 frames per second while idle.
+        #
+        # Address fields are named one by one rather than with ``wlan host``, whose
+        # expansion is frame-type dependent: on a from-DS data frame it tests addr3 and
+        # addr1 and never addr2, which is the field ``_parse_ap_eap`` keys on, and it
+        # rejects control frames before examining any address.
         bssid = self.target.bssid
+        station = self._capture_station
         capture_filter = (
             f"(wlan addr1 {bssid} or wlan addr2 {bssid} or wlan addr3 {bssid})"
-            " and not (type mgt and subtype beacon)"
         )
+        if station is None:
+            # No station is in play yet, so drop the beacons at least.
+            capture_filter += " and not (type mgt and subtype beacon)"
+        else:
+            capture_filter += f" and (wlan addr1 {station} or wlan addr2 {station})"
         kwargs: dict[str, str] = {}
         try:
             # Validate here, in this thread. AsyncSniffer builds its socket inside
@@ -1077,6 +1090,16 @@ class ScapyFingerprintBackend:
         self._stop_capture()
         time.sleep(delay)
         set_channel(self.interface, self.target.channel)
+        self._start_capture()
+
+    def _retune_capture(self, station: str) -> None:
+        """Narrow the kernel filter to one station, restarting the sniffer if needed."""
+
+        wanted = station.lower()
+        if self._capture_station == wanted and self._sniffer is not None:
+            return
+        self._stop_capture()
+        self._capture_station = wanted
         self._start_capture()
 
     def _write(self, packet: Packet) -> None:
@@ -1160,6 +1183,7 @@ class ScapyFingerprintBackend:
 
     def _reset_station(self, station: str) -> None:
         self._seen_eap.pop(station.lower(), None)
+        self._retune_capture(station)
         while True:
             try:
                 self.packets.get_nowait()
