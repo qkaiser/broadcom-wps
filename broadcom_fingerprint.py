@@ -555,15 +555,42 @@ def random_station() -> str:
     return octets.hex(":")
 
 
-def _radiotap() -> Packet:
-    """Transmit at the lowest basic rate rather than leaving the rate to the driver.
+# 802.11 data rates, in 500 kbit/s units. A rates element may also carry BSS
+# membership selectors (HT/VHT PHY, SAE hash-to-element), which set the same
+# high bit as a basic rate but are not rates and must not be transmitted at.
+_DATA_RATES = frozenset({2, 4, 11, 22, 12, 18, 24, 36, 48, 72, 96, 108})
+_DEFAULT_RATE_MBPS = 1.0
 
-    A bare ``RadioTap()`` sets ``present=0``, so mac80211 chooses the rate and the
-    frame can go out at a modulation the target does not answer. The sweep is
-    2.4 GHz only, so 1 Mbps DSSS is always a valid basic rate.
+
+def _lowest_basic_rate(target: Observation | None) -> float:
+    """Return the rate to transmit at, in Mbps.
+
+    Management frames belong at a basic rate: the BSSBasicRateSet is what every
+    station in the BSS is required to decode. Rates carry the set in their high
+    bit, so the lowest marked entry is the safe choice. Without a target yet, or
+    for an advertisement that marks nothing, fall back to 1 Mbps DSSS.
     """
 
-    return RadioTap(present="Rate", Rate=1)
+    if target is None:
+        return _DEFAULT_RATE_MBPS
+    basic = [
+        value & 0x7F
+        for value in target.rates + target.extended_rates
+        if value & 0x80 and (value & 0x7F) in _DATA_RATES
+    ]
+    if not basic:
+        return _DEFAULT_RATE_MBPS
+    return min(basic) / 2
+
+
+def _radiotap(target: Observation | None = None) -> Packet:
+    """Pin the transmit rate rather than leaving it to the driver.
+
+    A bare ``RadioTap()`` sets ``present=0``, so mac80211 chooses the rate and
+    the frame can go out at a modulation the target does not answer.
+    """
+
+    return RadioTap(present="Rate", Rate=_lowest_basic_rate(target))
 
 
 def _wildcard_probe(station: str) -> Packet:
@@ -585,7 +612,7 @@ def _wildcard_probe(station: str) -> Packet:
 
 def _directed_probe(station: str, target: Observation) -> Packet:
     return (
-        _radiotap()
+        _radiotap(target)
         / Dot11(
             type=0,
             subtype=4,
@@ -724,7 +751,7 @@ class LiveDiscovery:
 
 def _authentication_frame(station: str, target: Observation) -> Packet:
     return (
-        _radiotap()
+        _radiotap(target)
         / Dot11(
             type=0,
             subtype=11,
@@ -748,7 +775,7 @@ def _association_frame(
     # the "minimal" attempt drops RSN entirely for open/legacy APs.
     rates = target.rates
     frame = (
-        _radiotap()
+        _radiotap(target)
         / Dot11(
             type=0,
             subtype=0,
@@ -856,7 +883,7 @@ def _station_data_frame(
     eapol: bytes,
 ) -> Packet:
     return (
-        _radiotap()
+        _radiotap(target)
         / Dot11(
             type=2,
             subtype=0,
@@ -873,7 +900,7 @@ def _station_data_frame(
 
 def _deauthentication_frame(station: str, target: Observation) -> Packet:
     return (
-        _radiotap()
+        _radiotap(target)
         / Dot11(
             type=0,
             subtype=12,
@@ -1099,7 +1126,7 @@ class ScapyFingerprintBackend:
                     flags &= ~0x04
                 fragment_header.FCfield = flags
                 fragment_header.SC = (sequence << 4) | (offset // MAC_FRAGMENT_SIZE)
-                fragments.append(_radiotap() / fragment_header / Raw(chunk))
+                fragments.append(_radiotap(self.target) / fragment_header / Raw(chunk))
             with self._pcap_lock:
                 for fragment in fragments:
                     self.pcap.write(fragment)
