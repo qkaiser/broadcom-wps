@@ -27,6 +27,7 @@ from pathlib import Path
 from types import TracebackType
 from typing import Any, Protocol, Self
 
+from scapy.arch.common import compile_filter
 from scapy.layers.dot11 import (
     Dot11,
     Dot11AssoReq,
@@ -38,7 +39,6 @@ from scapy.layers.dot11 import (
     Dot11ProbeReq,
     RadioTap,
 )
-from scapy.arch.common import compile_filter
 from scapy.layers.l2 import LLC, SNAP
 from scapy.packet import Packet, Raw
 from scapy.sendrecv import AsyncSniffer, sendp
@@ -1043,7 +1043,7 @@ class ScapyFingerprintBackend:
             # ``start()`` returns cleanly and a rejected filter would otherwise leave
             # a live object with a dead thread and no capture at all.
             compile_filter(capture_filter, iface=self.interface)
-        except Exception:
+        except Exception:  # noqa: BLE001, S110 - an unfiltered capture still works
             pass
         else:
             kwargs["filter"] = capture_filter
