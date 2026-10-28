@@ -801,20 +801,30 @@ def _station_rsn_element(ap_rsn: bytes | None) -> bytes | None:
     if ap_rsn is not None:
         try:
             # Layout: version(2) group(4) pcount(2) pairwise[...] acount(2) akm[...]
-            offset = 2
-            group_cipher = ap_rsn[offset : offset + 4] or group_cipher
-            offset += 4
-            pcount = int.from_bytes(ap_rsn[offset : offset + 2], "little")
-            offset += 2
-            advertised_pairwise = [
-                ap_rsn[offset + i * 4 : offset + i * 4 + 4] for i in range(pcount)
-            ]
-            offset += pcount * 4
-            acount = int.from_bytes(ap_rsn[offset : offset + 2], "little")
-            offset += 2
-            advertised_akm = [
-                ap_rsn[offset + i * 4 : offset + i * 4 + 4] for i in range(acount)
-            ]
+
+            def take(offset: int, count: int) -> tuple[bytes, int]:
+                chunk = ap_rsn[offset : offset + count]
+                if len(chunk) != count:
+                    raise ValueError("truncated RSN element")
+                return chunk, offset + count
+
+            # Slicing never raises IndexError on short input, so every field is
+            # read through a strict reader: a truncated or lying length field
+            # must fall back to defaults instead of emitting a malformed
+            # station-side RSN element.
+            group_cipher, offset = take(2, 4)
+            pairwise_count_bytes, offset = take(offset, 2)
+            pairwise_count = int.from_bytes(pairwise_count_bytes, "little")
+            advertised_pairwise = []
+            for _index in range(pairwise_count):
+                suite, offset = take(offset, 4)
+                advertised_pairwise.append(suite)
+            akm_count_bytes, offset = take(offset, 2)
+            akm_count = int.from_bytes(akm_count_bytes, "little")
+            advertised_akm = []
+            for _index in range(akm_count):
+                suite, offset = take(offset, 4)
+                advertised_akm.append(suite)
             # Prefer CCMP; fall back to whatever pairwise cipher the AP offered.
             if advertised_pairwise:
                 pairwise = (
